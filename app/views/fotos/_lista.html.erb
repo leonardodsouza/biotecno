@@ -1,0 +1,17 @@
+<div class="panel-body">
+    <table class="table">
+    <tbody>
+        <% @fotos.each do |foto| %>
+        <tr>
+            <td ><%= image_tag foto.foto.url(:thumb), class: "img-thumbnail" %></td>
+            <td style="width: 50%"><%= foto.legenda %></td>
+            <td style="width: 5%">
+             <%= link_to foto, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                 <i class="material-icons">delete</i>
+            <%end%>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+</div>

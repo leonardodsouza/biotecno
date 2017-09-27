@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2">Detalhes do orçamento</h3>
+  </div>
+</div>
+          
+<div class="container">
+  <div class="section">
+      
+      <%= link_to orcamentos_path, class: "btn-floating right" do%>
+        <i class="material-icons">arrow_back</i>
+      <%end%>
+      
+      <h5><%= @orcamento.nome %></h5>
+      <div class="divider"></div>
+        
+        <p>
+          <b>Produto:</b>
+          <%= @orcamento.produto.modelo %> <br>
+
+          <b>Razao:</b>
+          <%= @orcamento.razao %> <br>
+     
+          <b>Tipo:</b>
+          <%= @orcamento.tipo %> <br>
+    
+          <b>Email:</b>
+          <%= @orcamento.email %> <br>
+    
+          <b>Telefone:</b>
+          <%= @orcamento.telefone %> <br>
+
+          <b>Estado:</b>
+          <%= @orcamento.estado %> <br>
+  
+          <b>Cidade:</b>
+          <%= @orcamento.cidade %> <br>
+          
+          <b>Data:</b>
+          <%= @orcamento.created_at.strftime("%d/%m/%Y") %>
+        </p>
+        
+        <p class="msg">
+          <%= @orcamento.mensagem %>
+        </p>
+        
+        <p><%= mail_to @orcamento.email, "Responder", class: "waves-effect waves-light btn" %></p>
+  </div>
+</div>

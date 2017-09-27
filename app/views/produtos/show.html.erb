@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2"><%= Produto.model_name.human %></h3>
+  </div>
+</div>
+            
+  <div class="container">
+    <div class="section">
+      <%= link_to produtos_path, class: "btn-floating right" do%>
+        <i class="material-icons">arrow_back</i>
+      <%end%>
+      <h5><%= @produto.modelo %></h5>
+      <span><%= @produto.categoria.nome %></span>
+      <div class="divider"></div>        
+      <div class="gallery">
+        <ul id="lightgallery" class="list-unstyled row">
+          <li data-responsive="<%= @produto.foto.url %>" data-src="<%= @produto.foto.url %>" data-sub-html="Foto do imóvel">
+            <a href="">
+              <%= image_tag @produto.foto.url(:medium)%>
+            </a>
+          </li>
+          <% for foto in @produto.fotos do %>
+            <li class="thumb-gallery" data-responsive="<%= foto.foto.url %>" data-src="<%= foto.foto.url %>" data-sub-html="<%= foto.legenda %>">
+              <a href="">
+                  <%= image_tag foto.foto.url(:thumb) %>
+              </a>
+            </li>
+          <%end%>    
+        </ul>
+      </div>          
+      <%= link_to 'orçamento', edit_orcamento_path(@produto.id), class: "waves-effect waves-light btn"%>
+      <%= raw(@produto.descricao) %>
+      <% if @produto.video.present? %>  
+        <%= @produto.video %>
+      <%end%> 
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+     $('#lightgallery').lightGallery();
+    });
+  </script>

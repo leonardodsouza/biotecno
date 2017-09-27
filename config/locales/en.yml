@@ -1,0 +1,50 @@
+en:
+ pit: The best products for preserving vaccines, blood, organs and medicines
+ suporte: Suporteyy
+ atendimento: Atendimentoyy
+ comercial: Comercialyy
+ conheca_o_suporte: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos 
+ conheca_o_atendimento: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
+ conheca_o_comercial: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
+ inicio: Begin
+ sair: Get out
+ entrar: Login
+ editar: Edit
+ deletar: Delete
+ cancelar: Cancel
+ visualizar: To view
+ fora: Assistance outside Brazil
+ dentro: Assists in Brazil
+ activerecord:
+  models:
+    ajuda: Questions and Answers
+    artigo: Articles
+    assistencia: Assists
+    categoria: Categories
+    produto: Produtos@
+  attributes:
+    ajuda:
+     pergunta: Question
+     resposta: Answer
+    artigo:
+     titulo: Article title
+     resumo: Summary
+     texto: Article text
+    assistencia:
+     nome: Name of service
+     estado: State 
+     cidade: City
+     endereco: Address
+     telefone: Phone    
+     email: Email  
+     foto: Logo
+    categoria:
+     nome: Category name
+     descricao: Description 
+    produto:
+     categoria_id: Categoria
+     modelo: Modelo@
+     resumo: Resumo@ 
+     descricao: Description
+     video: Video
+     foto: Photo

@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <div class="container">
+        <h3 class="header center teal-text text-lighten-2"><%= Produto.model_name.human %></h3>
+    </div>
+</div>
+<div class="container">
+  
+      <% for categoria in Categoria.all %>
+      <% if Produto.find_by_categoria_id(categoria.id) %>
+      <div class="card">
+          <div class="card-content">
+          <h4 class="header teal-text text-lighten-2"> <%= categoria.nome %></h4>
+          <span> <%= raw(categoria.descricao) %></span>
+      </div>
+      </div>    
+      <% end %>
+      <div class="row">
+      <% for produto in Produto.where('categoria_id = ?', categoria.id) %>
+      <div class="col s12">
+          <div class="card horizontal">
+            <div class="card-image">
+                <%= link_to (image_tag produto.foto.url(:lista)), produto %>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                  <span class="card-title teal-text"><%= produto.modelo %></span>
+                  <P><%= produto.resumo %></P>
+              </div>
+              <% if usuario_signed_in? %>
+              <div class="card-action">
+                <%= link_to edit_produto_path(produto), class: "btn-floating" do %>
+                  <i class="material-icons">edit</i>
+                <%end%>
+                <%= link_to produto, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                  <i class="material-icons">delete</i>
+                <%end%>
+              </div> 
+            <%else%> 
+              <div class="card-action">
+                <%= link_to  t('mais'), produto %>
+              </div>
+              <%end%>
+            </div>
+          </div>
+        </div>
+          <%end%>
+        
+      </div>
+    <%end%> 
+ 
+</div>
+
+

@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2"><%= Artigo.model_name.human %></h3>
+  </div>
+</div>
+            
+  <div class="container">
+    <div class="section">
+        
+        <%= link_to artigos_path, class: "btn-floating right" do%>
+          <i class="material-icons">arrow_back</i>
+        <%end%>
+        
+        <h5><%= @artigo.titulo %></h5>
+        <div class="divider"></div>
+        <%= image_tag @artigo.foto.url, class:"responsive-img" %>  
+        <p><%= raw(@artigo.texto) %></p>
+
+    </div>
+  </div>
+    
+    

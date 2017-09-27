@@ -1,0 +1,64 @@
+<%= form_with(model: assistencia, local: true) do |form| %>
+  <% if assistencia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assistencia.errors.count, "error") %> prohibited this assistencia from being saved:</h2>
+
+      <ul>
+      <% assistencia.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :nome, id: :assistencia_nome %>
+      <%= form.label :nome %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.collection_select(:estado, Estado.all.order(:nome), :nome, :nome, {:prompt => 'Selecione o estado' }) %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :cidade, id: :assistencia_cidade %>
+      <%= form.label :cidade %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :endereco, id: :assistencia_endereco %>
+      <%= form.label :endereco %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :telefone, id: :assistencia_telefone %>
+      <%= form.label :telefone %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :email, id: :assistencia_email %>
+      <%= form.label :email %>
+    </div>  
+  </div>  
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.submit class: "waves-effect waves-light btn" %>
+      <%= link_to t('cancelar'), assistencias_path, class: "waves-effect waves-light btn" %>
+    </div>  
+  </div>
+
+<% end %>
+

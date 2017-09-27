@@ -1,0 +1,50 @@
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+nav img{
+  margin-top: 10px;
+}
+
+p {
+  line-height: 2rem;
+}
+.container{
+  width: 80%;
+}
+.navbar-fixed {
+  z-index: 999;
+  }
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 500px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+footer.footer-copyright li{
+  color: #fff !important;
+}
+
+footer.footer-copyright{
+  color: #CCC;
+}

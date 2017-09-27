@@ -1,0 +1,21 @@
+<%= form_with(model: foto, remote: true ) do |form| %>
+  <%= form.hidden_field :produto_id, id: :foto_produto_id, value: @produto.id %>
+  
+  <div class="row">
+    <div class="file-field input-field col s4">
+      <div class="btn">
+        <span><%= t('foto') %></span>
+        <%= form.file_field :foto, id: :foto_foto %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+    <div class="input-field col s4">
+      <%= form.text_field :legenda, id: :foto_legenda, placeholder: "Legenda da foto" %>
+    </div>
+    <div class="input-field col s4">
+      <%= form.submit class: "waves-effect right waves-light btn" %>
+    </div>  
+  </div>
+<% end %>

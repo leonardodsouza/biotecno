@@ -1,0 +1,85 @@
+<%= form_with(model: contato, local: true) do |form| %>
+  <% if contato.errors.any? %>
+    <div id="error_explanation">
+      <h3>Erro</h2>
+      <ul>
+      <% contato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">account_circle</i>
+      <%= form.text_field :nome, id: :contato_nome, required: true %>
+      <%= form.label :nome %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">public</i>
+      <%= form.text_field :razao, id: :contato_razao, required: true %>
+      <%= form.label :razao %>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">repeat</i>
+        <%= form.select :tipo ,[[t(:estabelecimento_medico), t(:estabelecimento_medico)], [t(:revendedor_de_produtos), t(:revendedor_de_produtos)], [t(:orgao_publico),t(:orgao_publico)], [t(:estabelecimento_veterinario),t(:estabelecimento_veterinario)], [t(:outro), t(:outro)]], {prompt: "Tipo do estabelecimento"},{ required: true, class: "form-control" } %>
+      </div>      
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">mail</i>
+      <%= form.text_field :email, id: :contato_email, required: true %>
+      <%= form.label :email %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">phone</i>
+      <%= form.text_field :telefone, id: :contato_telefone, required: true %>
+      <%= form.label :telefone %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">room</i>
+      <%= form.collection_select(:estado, Estado.all.order(:nome), :nome, :nome, { required: true, :prompt => 'Selecione o estado' }) %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">place</i>
+      <%= form.text_field :cidade, id: :contato_cidade, required: true %>
+      <%= form.label :cidade %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">mode_edit</i>
+      <%= form.text_area :mensagem, id: :contato_mensagem, class: "materialize-textarea", data: {length: "500"}, required: true %>
+      <%= form.label :mensagem %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.submit t(:enviar), class: "waves-effect waves-light btn" %>
+    </div>  
+  </div>
+<% end %>
+
+
+
+
+

@@ -1,0 +1,2 @@
+module AssistenciasHelper
+end

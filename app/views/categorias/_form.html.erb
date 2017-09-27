@@ -1,0 +1,44 @@
+<%= form_with(model: categoria, local: true) do |form| %>
+  <% if categoria.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(categoria.errors.count, "error") %> prohibited this categoria from being saved:</h2>
+
+      <ul>
+      <% categoria.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="file-field input-field col s4">
+    <div class="btn">
+      <span><%= t('img') %></span>
+      <%= form.file_field :img, id: :categoria_img %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :nome, id: :categoria_nome, required: true %>
+      <%= form.label :nome %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.cktext_area :descricao, id: :categoria_descricao, class: "materialize-textarea", data: {length: "140"},  required: true %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.submit class: "waves-effect waves-light btn" %>
+      <%= link_to t('cancelar'), home_path, class: "waves-effect waves-light btn" %>
+    </div>  
+  </div>
+
+<% end %>

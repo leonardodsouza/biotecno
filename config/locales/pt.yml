@@ -1,0 +1,81 @@
+pt:
+ pit: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
+ suporte: Suporte
+ atendimento: Atendimento
+ comercial: Comercial
+ conheca_o_suporte: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos 
+ conheca_o_atendimento: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
+ conheca_o_comercial: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
+ inicio: Início
+ sair: Sair
+ entrar: Login
+ editar: Editar
+ deletar: Apagar
+ cancelar: Cancelar
+ enviar: Enviar
+ visualizar: Visualizar
+ fora: Assistência fora do Brasil
+ dentro: Assistências no Brasil
+ estabelecimento_medico: Estabelecimento médico
+ revendedor_de_produtos: Revendedor de Produtos/Equip Médicos
+ orgao_publico: Órgão Público
+ estabelecimento_veterinario: Estabelecimento Veterinário/Produtor Rural
+ outro: Outro
+ catalogo: Catálogo
+ activerecord:
+  models:
+    ajuda: Perguntas e respostas
+    artigo: Artigos
+    assistencia: Assistências
+    categoria: Categorias
+    produto: Produtos
+    contato: Contatos
+    orcamento: Orçamentos
+  attributes:
+    ajuda:
+     pergunta: Pergunta
+     resposta: Resposta
+    artigo:
+     titulo: Título do artigo
+     resumo: Resumo
+     texto: Texto do artigo
+    assistencia:
+     nome: Nome da assistência
+     estado: Estado 
+     cidade: Cidade
+     endereco: Endereço
+     telefone: Telefone    
+     email: Email
+     foto: Logo
+    categoria:
+     nome: Nome da categoria
+     descricao: Descrição da categoria
+    produto:
+     categoria_id: Categoria
+     modelo: Modelo 
+     resumo: Resumo 
+     descricao: Descrição
+     video: Vídeo
+     foto: Foto
+    contato:
+     nome: Nome 
+     razao: Razão social
+     tipo: Tipo do estabelecimento
+     outro: Outro 
+     email: E-mail
+     telefone: Telefone 
+     estado: Estado
+     cidade: Cidade 
+     mensagem: Escreva aqui sua mensagem
+     created_at: Data
+    orcamento: 
+     nome: Nome 
+     razao: Razão social
+     tipo: Tipo do estabelecimento
+     outro: Outro 
+     email: E-mail
+     telefone: Telefone 
+     estado: Estado
+     cidade: Cidade 
+     mensagem: Escreva aqui sua mensagem
+     created_at: Data

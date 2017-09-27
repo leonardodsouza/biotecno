@@ -1,0 +1,24 @@
+<%= form_with(model: ajuda, local: true) do |form| %>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.text_field :pergunta, id: :ajuda_pergunta %>
+          <%= form.label :pergunta %>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.text_area :resposta, id: :ajuda_resposta, class: "materialize-textarea" %>
+          <%= form.label :resposta %>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.submit class: "waves-effect waves-light btn" %>
+          <%= link_to t('cancelar'), ajudas_path, class: "waves-effect waves-light btn" %>
+        </div>  
+      </div>
+
+<% end %>

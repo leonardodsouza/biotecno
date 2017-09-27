@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2">
+          <i class="material-icons">monetization_on</i>
+        <%= Orcamento.model_name.human %></h3>
+  </div>
+</div>
+        
+
+<div class="container">
+
+  <table class="responsive-table bordered">
+    <thead>
+      <tr>
+        <th><%= Orcamento.human_attribute_name(:created_at) %></th>
+        <th><%= Orcamento.human_attribute_name(:nome) %></th>
+        <th><%= Orcamento.human_attribute_name(:razao) %></th>
+        <th style="width: 5%;" colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orcamentos.each do |orcamento| %>
+        <tr>
+          <td><%= orcamento.created_at.strftime("%d/%m/%Y") %></td>
+          <td><%= orcamento.nome %></td>
+          <td><%= orcamento.razao %></td>
+          <td>
+            <%= link_to orcamento, class: "btn-floating" do%>
+              <i class="material-icons">email</i>
+            <%end%>
+          </td>
+          <td>
+            <%= link_to orcamento, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+              <i class="material-icons">delete</i>
+            <%end%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

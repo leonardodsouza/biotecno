@@ -1,0 +1,56 @@
+<%= form_with(model: artigo, local: true) do |form| %>
+  
+<% if artigo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(artigo.errors.count, "error") %> prohibited this artigo from being saved:</h2>
+
+      <ul>
+      <% artigo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="file-field input-field col s12">
+      <div class="btn">
+        <span><%= t('foto') %></span>
+        <%= form.file_field :foto, id: :artigo_foto %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :titulo, id: :artigo_titulo %>
+      <%= form.label :titulo %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_area :resumo, id: :artigo_resumo, class: "materialize-textarea" %>
+      <%= form.label :resumo %>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.cktext_area :texto, id: :artigo_texto %>
+    </div>  
+  </div>
+
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= form.submit class: "waves-effect waves-light btn" %>
+      <%= link_to t('cancelar'), artigos_path, class: "waves-effect waves-light btn" %>
+    </div>  
+  </div>
+
+<% end %>

@@ -1,0 +1,115 @@
+<div class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2"><%= @backgound_1.titulo %></h1>
+            <div class="row center">
+                <h5 class="header col s12 light"><%= raw(@backgound_1.descricao) %></h5>
+            </div>
+            <div class="row center">
+                <%= link_to  "Produtos", produtos_path, class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                <% if usuario_signed_in? %>
+                    <%= link_to  "Editar", edit_banner_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                <%end%>    
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="parallax"><%= image_tag @backgound_1.img.url %></div>
+</div>
+
+<div class="home-1">
+    <div class="row center">
+        <h3 class="header center teal-text text-lighten-2">Linhas de produtos</h3>
+    </div>
+    <div class="row">
+        <% @categorias.each do |categoria| %>
+            <div class="container">
+                <div class="col s12 m6">
+                    <h4 class="center teal-text text-lighten-2"><%= categoria.nome %></h4>
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <%= image_tag categoria.img.url(:medium) %>
+                        </div>
+                        <div class="card-stacked">
+                        <div class="card-content">
+                            <p><%= raw(categoria.descricao) %></p>
+                        </div>
+                        <% if usuario_signed_in? %>
+                            <div class="card-action">
+                            <%= link_to edit_categoria_path(categoria), class: "btn-floating" do %>
+                                <i class="material-icons">edit</i>
+                            <%end%>
+                            <%= link_to categoria, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                                <i class="material-icons">delete</i>
+                            <%end%>
+                            </div>
+                        <%else%> 
+                            <div class="card-action">
+                                <%= link_to  "Produtos", produtos_path  %>
+                            </div>
+                        <%end%>    
+                        </div>
+                    </div>
+                </div>                 
+            </div>
+        <%end%>
+    </div>
+</div>    
+
+<div class="home-1 grey lighten-4">
+    <div class="row center">
+        <h3 class="header center teal-text text-lighten-2"><%= @pagina_1.titulo %></h3>
+    </div>
+    <div class="container">
+        <div class="row center">
+            <p><%= raw(@pagina_1.texto) %></p>
+            <% if usuario_signed_in? %>
+                <%= link_to  "Editar", edit_pagina_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+            <%end%> 
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <% if @backgound_2.titulo.present? %>
+            <h1 class="header center teal-text text-lighten-2"><%= @backgound_2.titulo %></h1>
+            <%end%>
+            <div class="row center">
+                <h5 class="header col s12 light"><%= raw(@backgound_2.descricao) %></h5>
+            </div>
+            <div class="row center">
+                <% if usuario_signed_in? %>
+                    <%= link_to  "Editar", edit_banner_path(2), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                <%end%>    
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="parallax"><%= image_tag @backgound_2.img.url %></div>
+</div>
+
+<div class="home-1">
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h3 class="header center teal-text text-lighten-2"><%= @backgound_3.titulo %></h3>
+                    <div class="row center">
+                        <p><%= raw(@backgound_3.descricao) %></p>
+                    </div>
+                    
+                    <%= image_tag @backgound_3.img.url , class:"responsive-img"%>
+                    <br>
+                    <% if usuario_signed_in? %>
+                        <%= link_to  "Editar", edit_banner_path(3), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                    <%end%> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

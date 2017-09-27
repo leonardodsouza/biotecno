@@ -1,0 +1,3 @@
+class Assistencia < ApplicationRecord
+
+end

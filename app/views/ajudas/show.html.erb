@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= Ajuda.human_attribute_name(:pergunta) %></strong>
+  <%= @ajuda.pergunta %>
+</p>
+
+<p>
+  <strong><%= Ajuda.human_attribute_name(:resposta) %></strong><br>
+  <%= @ajuda.resposta %>
+</p>
+
+<%= link_to t('editar'), edit_ajuda_path(@ajuda) %> |
+<%= link_to t('cancelar'), ajudas_path %>

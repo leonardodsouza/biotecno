@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2">Entrar</h3>
+  </div>
+</div>
+<div class="container">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.email_field :email, autofocus: true , autocomplete: "off"%>
+        <%= f.label :email %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.label :password %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.submit "Log in", class: "waves-effect waves-light btn"%>
+      </div>
+    </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>

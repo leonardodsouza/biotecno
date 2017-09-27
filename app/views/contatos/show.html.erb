@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2">Detalhes da mensagem</h3>
+  </div>
+</div>
+          
+<div class="container">
+  <div class="section">
+      
+      <%= link_to contatos_path, class: "btn-floating right" do%>
+        <i class="material-icons">arrow_back</i>
+      <%end%>
+      
+      <h5><%= @contato.nome %></h5>
+      <div class="divider"></div>
+        
+        <p>
+          <b>Razao:</b>
+          <%= @contato.razao %> <br>
+     
+          <b>Tipo:</b>
+          <%= @contato.tipo %> <br>
+    
+          <b>Email:</b>
+          <%= @contato.email %> <br>
+    
+          <b>Telefone:</b>
+          <%= @contato.telefone %> <br>
+
+          <b>Estado:</b>
+          <%= @contato.estado %> <br>
+  
+          <b>Cidade:</b>
+          <%= @contato.cidade %> <br>
+        </p>
+        
+        <p class="msg">
+          <%= @contato.mensagem %>
+        </p>
+        
+        <p><%= mail_to @contato.email, "Responder", class: "waves-effect waves-light btn" %></p>
+  </div>
+</div>
+

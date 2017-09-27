@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @assistencia.nome %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @assistencia.estado %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @assistencia.cidade %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @assistencia.endereco %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @assistencia.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @assistencia.email %>
+</p>
+
+<%= link_to 'Edit', edit_assistencia_path(@assistencia) %> |
+<%= link_to 'Back', assistencias_path %>

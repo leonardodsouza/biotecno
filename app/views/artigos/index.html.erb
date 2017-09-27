@@ -1,0 +1,39 @@
+<div class="home-2">
+    <div class="container">
+        <div class="row">
+            <h3 class="header teal-text text-lighten-2"><%= @pagina_4.titulo %></h3>
+            <div class="card">
+                <div class="card-content">
+                 <p><%= raw(@pagina_4.texto) %></p>
+                 <% if usuario_signed_in? %>
+                 <%= link_to  "Editar", edit_pagina_path(4), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                 <%end%> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<div class="container">
+  <% @artigos.each do |artigo| %>
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag artigo.foto.url(:medium), class: "responsive-img" %>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p class="hide-on-large-only"><%= artigo.titulo %></p>
+          <p class="hide-on-small-only"><%= artigo.resumo %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to t('visualizar'), artigo %>
+          <% if usuario_signed_in? %>
+            <%= link_to t('editar'), edit_artigo_path(artigo) %>
+            <%= link_to t('deletar'), artigo, method: :delete, data: { confirm: 'Deseja apagar ?' } %>
+          <%end%> 
+        </div>
+      </div>
+    </div>
+  <%end%>
+
+</div>
