@@ -32,8 +32,6 @@
           <li><a class="teal-text dropdown-button" href="#!" data-activates="dropdown1"><%= t('traduzir')%><i class="material-icons right">arrow_drop_down</i></a></li>
           <% if usuario_signed_in? %>
             <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "teal-text" %></li>
-          <%else%>
-            <li><%= link_to  t('entrar'), new_usuario_session_path, class: "teal-text" %></li>
           <%end%>
           
         </ul>
@@ -48,7 +46,7 @@
             <% if usuario_signed_in? %>
               <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "teal-text" %></li>
             <%end%>
-            
+
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse show-on-small teal-text"><i class="material-icons">menu</i></a>
       </div>
