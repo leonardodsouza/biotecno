@@ -47,8 +47,6 @@
             <li><%= link_to Contato.model_name.human, new_contato_path, class: "teal-text" %></li>
             <% if usuario_signed_in? %>
               <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "teal-text" %></li>
-            <%else%>
-              <li><%= link_to  t('entrar'), new_usuario_session_path, class: "teal-text" %></li>
             <%end%>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse show-on-small teal-text"><i class="material-icons">menu</i></a>
