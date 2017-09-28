@@ -48,6 +48,7 @@
             <% if usuario_signed_in? %>
               <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "teal-text" %></li>
             <%end%>
+            
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse show-on-small teal-text"><i class="material-icons">menu</i></a>
       </div>
