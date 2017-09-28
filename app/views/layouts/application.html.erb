@@ -87,6 +87,12 @@
               <i class="material-icons">add</i>
             <%end%>
           <%end%>
+          <!-- ################## PRODUTOS ################# -->
+          <% if controller_name == 'videos' %>
+            <%= link_to new_video_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+              <i class="material-icons">add</i>
+            <%end%>
+          <%end%>
           <!-- ################## dashboard ################# -->
           <div class="container">
             <div class="fixed-action-btn vertical click-to-toggle">
