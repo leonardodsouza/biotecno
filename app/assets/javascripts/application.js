@@ -13,6 +13,6 @@
 //= require rails-ujs
 //= require jquery
 //= require materialize
-//= require ckeditor/init
 //= require chartkick
+//= require ckeditor/init
 //= require_tree .

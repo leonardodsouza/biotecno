@@ -18,7 +18,6 @@
 </div>
 
 <div class="container">
-  <h5 class="header center teal-text text-lighten-2"><%= t('dentro')%></h5>
   <% for estado in Estado.all %>
   <% if Assistencia.find_by_estado(estado.nome) %>
       <h4 class="header teal-text text-lighten-2"> <%= estado.nome %></h4>
