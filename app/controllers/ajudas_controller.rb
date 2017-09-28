@@ -30,7 +30,7 @@ class AjudasController < ApplicationController
 
     respond_to do |format|
       if @ajuda.save
-        format.html { redirect_to @ajuda, notice: 'Ajuda was successfully created.' }
+        format.html { redirect_to ajudas_path, notice: 'Ajuda was successfully created.' }
         format.json { render :show, status: :created, location: @ajuda }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class AjudasController < ApplicationController
   def update
     respond_to do |format|
       if @ajuda.update(ajuda_params)
-        format.html { redirect_to @ajuda, notice: 'Ajuda was successfully updated.' }
+        format.html { redirect_to ajudas_path, notice: 'Ajuda was successfully updated.' }
         format.json { render :show, status: :ok, location: @ajuda }
       else
         format.html { render :edit }

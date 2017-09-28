@@ -29,7 +29,7 @@ class ArtigosController < ApplicationController
 
     respond_to do |format|
       if @artigo.save
-        format.html { redirect_to @artigo, notice: 'Artigo was successfully created.' }
+        format.html { redirect_to artigos_path, notice: 'Artigo was successfully created.' }
         format.json { render :show, status: :created, location: @artigo }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ArtigosController < ApplicationController
   def update
     respond_to do |format|
       if @artigo.update(artigo_params)
-        format.html { redirect_to @artigo, notice: 'Artigo was successfully updated.' }
+        format.html { redirect_to artigos_path, notice: 'Artigo was successfully updated.' }
         format.json { render :show, status: :ok, location: @artigo }
       else
         format.html { render :edit }
