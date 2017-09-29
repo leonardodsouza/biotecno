@@ -16,23 +16,23 @@
 <div class="container">
     <div class="row">
     <% @videos.each do |video| %>
-        <div class="card-panel hoverable">
-            <div class="card-content">
-                <h5 class="header teal-text text-lighten-2"><%= video.titulo %></h5>
-                <div class="video-container">
-                <%= raw(video.url) %>
-                </div>
-                <%= raw(video.texto) %>
-                <% if usuario_signed_in? %>
-                <%= link_to edit_video_path(video), class: "btn-floating" do %>
-                <i class="material-icons">edit</i>
-                <%end%>
-                <%= link_to video, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
-                <i class="material-icons">delete</i>
-                <%end%>
-                <%end%>
+    <div class="col s12 hoverable hide-on-small-only"> 
+        <div class="col s6"> 
+            <div class="video-container">      
+                <%= raw(video.url) %>   
             </div>
         </div>
+        <div class="col s6"> 
+            <h5 class="header teal-text text-lighten-2"><%= video.titulo %></h5>
+            <p><%= raw(video.texto) %></p>            
+        </div>
+    </div>  
+    <div class="col s12 hoverable hide-on-large-only"> 
+        <h5 class="header teal-text text-lighten-2"><%= video.titulo %></h5>   
+        <div class="video-container">   
+            <%= raw(video.url) %>   
+        </div>
+    </div>
     <%end%>
     </div>
 </div>
