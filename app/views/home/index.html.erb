@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="col s12 m6">
                     <h4 class="center teal-text text-lighten-2"><%= categoria.nome %></h4>
-                    <div class="card horizontal">
+                    <div class="card horizontal hide-on-small-only">
                         <div class="card-image">
                             <%= image_tag categoria.img.url(:medium) %>
                         </div>
@@ -49,6 +49,11 @@
                                 <%= link_to  "Produtos", produtos_path  %>
                             </div>
                         <%end%>    
+                        </div>
+                    </div>
+                    <div class="card hide-on-large-only">
+                        <div class="card-image">
+                            <%= image_tag categoria.img.url(:medium) %>
                         </div>
                     </div>
                 </div>                 

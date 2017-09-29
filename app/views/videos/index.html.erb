@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row">
     <% @videos.each do |video| %>
-    <div class="col s12 hoverable hide-on-small-only"> 
+    <div class="col s12 hoverable hide-on-small-only z-depth-2"> 
         <div class="col s6"> 
             <div class="video-container">      
                 <%= raw(video.url) %>   
@@ -27,7 +27,7 @@
             <p><%= raw(video.texto) %></p>            
         </div>
     </div>  
-    <div class="col s12 hoverable hide-on-large-only"> 
+    <div class="col s12 hoverable hide-on-large-only z-depth-2"> 
         <h5 class="header teal-text text-lighten-2"><%= video.titulo %></h5>   
         <div class="video-container">   
             <%= raw(video.url) %>   

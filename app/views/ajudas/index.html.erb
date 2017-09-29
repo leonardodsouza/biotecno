@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container z-depth-2">
     <ul class="tabs">
       <li class="tab col s3"><a class="active" href="#test1">Perguntas e respostas</a></li>
       <li class="tab col s3"><a class="active" href="#test2">Assistência técnica</a></li>
@@ -29,7 +29,7 @@
                 <i class="material-icons">help</i>
                 <%= ajuda.pergunta %>
               </div> 
-              <div class="collapsible-body"> 
+              <div class="collapsible-body white"> 
                 <div class="row">
                   <div class="col s10">
                     <%= ajuda.resposta %>
@@ -64,11 +64,7 @@
                   <p><%= assistencia.email %></p>
                 </div>
                 <div class="card-action">
-                  <%= assistencia.telefone %> 
-                  <% if usuario_signed_in? %>
-                    <%= link_to t('editar'), edit_assistencia_path(assistencia) %>
-                    <%= link_to t('deletar'), assistencia, method: :delete, data: { confirm: 'Deseja apagar ?' } %>
-                  <%end%> 
+                  <%= assistencia.telefone %>  
                 </div>
               </div>
             </div>

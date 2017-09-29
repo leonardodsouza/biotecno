@@ -24,7 +24,7 @@
   <% end %>
   <% for assistencia in Assistencia.where('estado = ?', estado.nome) %>
  
-  <div class="card horizontal">
+  <div class="card horizontal hoverable">
     <div class="card-stacked">
       <div class="card-content">
         <p><b><%= assistencia.nome.upcase %></b></p>
@@ -34,9 +34,13 @@
       <div class="card-action">
         <%= assistencia.telefone %> 
         <% if usuario_signed_in? %>
-          <%= link_to t('editar'), edit_assistencia_path(assistencia) %>
-          <%= link_to t('deletar'), assistencia, method: :delete, data: { confirm: 'Deseja apagar ?' } %>
-        <%end%> 
+        <%= link_to edit_assistencia_path(assistencia), class: "btn-floating" do %>
+          <i class="material-icons">edit</i>
+        <%end%>
+        <%= link_to assistencia, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+          <i class="material-icons">delete</i>
+        <%end%>
+      <%end%> 
       </div>
     </div>
   </div>
