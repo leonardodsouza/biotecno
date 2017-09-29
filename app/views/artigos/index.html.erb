@@ -29,8 +29,12 @@
         <div class="card-action">
           <%= link_to t('visualizar'), artigo %>
           <% if usuario_signed_in? %>
-            <%= link_to t('editar'), edit_artigo_path(artigo) %>
-            <%= link_to t('deletar'), artigo, method: :delete, data: { confirm: 'Deseja apagar ?' } %>
+          <%= link_to edit_artigo_path(artigo), class: "btn-floating" do %>
+              <i class="material-icons">edit</i>
+            <%end%>
+            <%= link_to artigo, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+              <i class="material-icons">delete</i>
+            <%end%>
           <%end%> 
         </div>
       </div>
