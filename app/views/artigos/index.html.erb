@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <h3 class="header teal-text text-lighten-2"><%= @pagina_4.titulo %></h3>
-            <div class="card">
+            <div class="card-panel hoverable">
                 <div class="card-content">
                  <p><%= raw(@pagina_4.texto) %></p>
                  <% if usuario_signed_in? %>
@@ -15,8 +15,9 @@
 </div>
   
 <div class="container">
+    <div class="row">
   <% @artigos.each do |artigo| %>
-    <div class="card horizontal">
+    <div class="card horizontal hoverable">
       <div class="card-image">
         <%= image_tag artigo.foto.url(:medium), class: "responsive-img" %>
       </div>
@@ -35,5 +36,5 @@
       </div>
     </div>
   <%end%>
-
+    </div>
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927183944) do
+ActiveRecord::Schema.define(version: 20170929104316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,17 @@ ActiveRecord::Schema.define(version: 20170927183944) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "banner_translations", force: :cascade do |t|
+    t.integer "banner_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titulo"
+    t.text "descricao"
+    t.index ["banner_id"], name: "index_banner_translations_on_banner_id"
+    t.index ["locale"], name: "index_banner_translations_on_locale"
   end
 
   create_table "banners", force: :cascade do |t|
@@ -162,6 +173,17 @@ ActiveRecord::Schema.define(version: 20170927183944) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["produto_id"], name: "index_orcamentos_on_produto_id"
+  end
+
+  create_table "pagina_translations", force: :cascade do |t|
+    t.integer "pagina_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titulo"
+    t.text "texto"
+    t.index ["locale"], name: "index_pagina_translations_on_locale"
+    t.index ["pagina_id"], name: "index_pagina_translations_on_pagina_id"
   end
 
   create_table "paginas", force: :cascade do |t|

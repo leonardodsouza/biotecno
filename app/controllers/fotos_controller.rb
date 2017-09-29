@@ -1,4 +1,5 @@
 class FotosController < ApplicationController
+  before_action :authenticate_usuario!
   before_action :set_foto, only: [:destroy]
   before_action :authenticate_usuario!
 

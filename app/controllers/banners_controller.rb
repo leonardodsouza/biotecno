@@ -1,4 +1,5 @@
 class BannersController < ApplicationController
+  before_action :authenticate_usuario!
   before_action :set_banner, only: [:show, :edit, :update, :destroy]
 
   # GET /banners

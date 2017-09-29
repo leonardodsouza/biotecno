@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <h3 class="header teal-text text-lighten-2"><%= @pagina_5.titulo %></h3>
-            <div class="card">
+            <div class="card-panel hoverable">
                 <div class="card-content">
                  <p><%= raw(@pagina_5.texto) %></p>
                  <% if usuario_signed_in? %>
@@ -14,5 +14,14 @@
     </div>
 </div>
 <div class="container">
+        <div class="row">
+    <% if notice.present? %>
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+                <span class="card-title"><%= notice %></span>
+        </div>
+    </div>   
+    <%end%> 
     <%= render 'form', contato: @contato %>
+        </div>
 </div>

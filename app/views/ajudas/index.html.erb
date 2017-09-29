@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <h3 class="header teal-text text-lighten-2"><%= @pagina_3.titulo %></h3>
-            <div class="card">
+            <div class="card-panel hoverable">
                 <div class="card-content">
                  <p><%= raw(@pagina_3.texto) %></p>
                  <% if usuario_signed_in? %>
@@ -56,7 +56,7 @@
             
             <% for assistencia in Assistencia.all.order(:estado) %>
            
-            <div class="card horizontal">
+            <div class="card horizontal hoverable">
               <div class="card-stacked">
                 <div class="card-content">
                   <p><b><%= assistencia.nome.upcase %></b></p>

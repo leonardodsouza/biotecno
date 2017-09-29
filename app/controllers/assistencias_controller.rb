@@ -1,4 +1,5 @@
 class AssistenciasController < ApplicationController
+  before_action :authenticate_usuario!, except: [:index]
   before_action :set_assistencia, only: [:show, :edit, :update, :destroy]
 
   # GET /assistencias

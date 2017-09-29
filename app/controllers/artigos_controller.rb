@@ -1,4 +1,5 @@
 class ArtigosController < ApplicationController
+  before_action :authenticate_usuario!, except: [:index, :show]
   before_action :set_artigo, only: [:show, :edit, :update, :destroy]
 
   # GET /artigos

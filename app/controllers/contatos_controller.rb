@@ -1,4 +1,5 @@
 class ContatosController < ApplicationController
+  before_action :authenticate_usuario!, except: [:new, :create]
   before_action :set_contato, only: [:show, :edit, :update, :destroy]
 
   # GET /contatos
@@ -29,7 +30,7 @@ class ContatosController < ApplicationController
 
     respond_to do |format|
       if @contato.save
-        format.html { redirect_to @contato, notice: 'Contato was successfully created.' }
+        format.html { redirect_to new_contato_path, notice: 'Mensagem enviada com sucesso.' }
         format.json { render :show, status: :created, location: @contato }
       else
         format.html { render :new }
