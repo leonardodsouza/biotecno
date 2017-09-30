@@ -20,8 +20,8 @@
     <nav class="nav-extended white">
       <div class="nav-wrapper container">
       
-        <%= link_to (image_tag  "logotipo.png", class: "responsive-img brand-logo"), home_path %>
-       
+        <%= link_to (image_tag  "logotipo.png", class: "responsive-img brand-logo hide-on-small-only"), home_path %>
+        <%= image_tag  "logotipo.png", class: "responsive-img brand-logo hide-on-large-only" %>
         <ul class="right hide-on-med-and-down">
           
           <li><%= link_to Produto.model_name.human, produtos_path, class: "teal-text" %></li>
@@ -125,11 +125,13 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Biotecno</h5>
-            <p class="grey-text text-lighten-4"><%= t ('pit') %></p>
+            <h5 class="white-text"><%= footer.titulo %></h5>
+            <p class="grey-text text-lighten-4"><%= raw(footer.texto) %></p>
+            <% if usuario_signed_in? %>
+            <%= link_to  "Editar", edit_pagina_path(7), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+            <%end%> 
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
             <ul>
               <li><%= link_to t('inicio'), root_path, class: "grey-text text-lighten-3" %></li>
               <li><%= link_to Ajuda.model_name.human, ajudas_path, class: "grey-text text-lighten-3" %></li>
@@ -144,6 +146,9 @@
             <%= link_to_unless_current (image_tag  "br.png"), locale: "pt" %>
             <%= link_to_unless_current (image_tag  "United-States.png"), locale: "en" %>
             <%= link_to_unless_current (image_tag  "es.png"), locale: "es" %>
+            <div class="social-likes social-likes_vertical waves-effect waves-light btn right" data-counters="no" data-url=<%= full_url_for %> data-title="Facebook">
+                <div class="facebook" title="Share link on Facebook"><i class="material-icons left">share</i> Compartilhar</div>
+              </div>
         </div>
       </div>
     </footer>

@@ -6,6 +6,7 @@
             
   <div class="container">
     <div class="section">
+
       <%= link_to produtos_path, class: "btn-floating right" do%>
         <i class="material-icons">arrow_back</i>
       <%end%>
@@ -16,7 +17,7 @@
         <ul id="lightgallery" class="list-unstyled row">
           <li data-responsive="<%= @produto.foto.url %>" data-src="<%= @produto.foto.url %>" data-sub-html="Foto do imóvel">
             <a href="">
-              <%= image_tag @produto.foto.url(:medium)%>
+              <%= image_tag @produto.foto.url(:medium), class: "responsive-img img-capa"%>
             </a>
           </li>
           <% for foto in @produto.fotos do %>
@@ -29,9 +30,16 @@
         </ul>
       </div>          
       <%= link_to 'orçamento', edit_orcamento_path(@produto.id), class: "waves-effect waves-light btn"%>
+      <div class="social-likes social-likes_vertical waves-effect waves-light btn  indigo darken-4" data-counters="no" data-url=<%= full_url_for %> data-title="Facebook">
+        <div class="facebook" title="Share link on Facebook"><i class="material-icons left">share</i> Compartilhar</div>
+      </div>
       <%= raw(@produto.descricao) %>
       <% if @produto.video.present? %>  
-        <%= @produto.video %>
+      <div class="col s12 hoverable z-depth-2"> 
+          <div class="video-container">   
+              <%= raw(@produto.video) %>   
+          </div>
+      </div>
       <%end%> 
     </div>
   </div>

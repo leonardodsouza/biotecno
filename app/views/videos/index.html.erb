@@ -18,13 +18,25 @@
     <% @videos.each do |video| %>
     <div class="col s12 hoverable hide-on-small-only z-depth-2"> 
         <div class="col s6"> 
+            <p>
             <div class="video-container">      
                 <%= raw(video.url) %>   
             </div>
+        </p>
         </div>
         <div class="col s6"> 
             <h5 class="header teal-text text-lighten-2"><%= video.titulo %></h5>
-            <p><%= raw(video.texto) %></p>            
+            <p><%= raw(video.texto) %></p>   
+            <p>
+            <% if usuario_signed_in? %>
+            <%= link_to edit_video_path(video), class: "btn-floating" do %>
+                <i class="material-icons">edit</i>
+              <%end%>
+              <%= link_to video, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                <i class="material-icons">delete</i>
+              <%end%>
+            <%end%>          
+            </p>    
         </div>
     </div>  
     <div class="col s12 hoverable hide-on-large-only z-depth-2"> 

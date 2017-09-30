@@ -36,7 +36,20 @@ p {
 .icon-block .material-icons {
   font-size: inherit;
 }
+.thumb-gallery{
+  width: 150px;
+  height:  150px;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+.img-capa{
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
 
+}
 footer.page-footer {
   margin: 0;
 }

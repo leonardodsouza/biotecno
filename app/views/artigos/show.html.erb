@@ -11,6 +11,10 @@
           <i class="material-icons">arrow_back</i>
         <%end%>
         
+        <div class="social-likes social-likes_vertical waves-effect waves-light btn  indigo darken-4" data-counters="no" data-url=<%= full_url_for %> data-title="Facebook">
+          <div class="facebook" title="Share link on Facebook"><i class="material-icons left">share</i> Compartilhar</div>
+        </div>
+
         <h5><%= @artigo.titulo %></h5>
         <div class="divider"></div>
         <%= image_tag @artigo.foto.url, class:"responsive-img" %>  

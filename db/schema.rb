@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929104316) do
+ActiveRecord::Schema.define(version: 20170930194605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -234,6 +234,17 @@ ActiveRecord::Schema.define(version: 20170929104316) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_usuarios_on_email", unique: true
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
+  end
+
+  create_table "video_translations", force: :cascade do |t|
+    t.integer "video_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titulo"
+    t.text "texto"
+    t.index ["locale"], name: "index_video_translations_on_locale"
+    t.index ["video_id"], name: "index_video_translations_on_video_id"
   end
 
   create_table "videos", force: :cascade do |t|
