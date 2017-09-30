@@ -133,10 +133,16 @@
           </div>
           <div class="col l4 offset-l2 s12">
             <ul>
-              <li><%= link_to t('inicio'), root_path, class: "grey-text text-lighten-3" %></li>
-              <li><%= link_to Ajuda.model_name.human, ajudas_path, class: "grey-text text-lighten-3" %></li>
+              <li><%= link_to  t('inicio'), root_path , class: "grey-text text-lighten-3"%></li>
+              <li><%= link_to Produto.model_name.human, produtos_path, class: "grey-text text-lighten-3" %></li>
               <li><%= link_to Artigo.model_name.human, artigos_path, class: "grey-text text-lighten-3" %></li>
+              <li><%= link_to Video.model_name.human, videos_path, class: "grey-text text-lighten-3" %></li>
               <li><%= link_to Assistencia.model_name.human, assistencias_path, class: "grey-text text-lighten-3" %></li>
+              <li><%= link_to t('suporte'), ajudas_path, class: "grey-text text-lighten-3" %></li>
+              <li><%= link_to Contato.model_name.human, new_contato_path, class: "grey-text text-lighten-3" %></li>
+              <% if usuario_signed_in? %>
+                <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "grey-text text-lighten-3" %></li>
+              <%end%>            
             </ul>
           </div>
         </div>
