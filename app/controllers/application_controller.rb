@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   
   def footer
-    Pagina.find(7)
+    Pagina.find(8)
   end
   helper_method :footer 
 
