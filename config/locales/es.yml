@@ -56,7 +56,7 @@ es:
     contato:
      nome: Nombre 
      razao: Razón social
-     tipo: Tipo do estabelecimento
+     tipo: Tipo de establecimiento
      outro: Otros 
      email: E-mail
      telefone: Teléfono 
@@ -67,7 +67,7 @@ es:
     orcamento: 
      nome: Nome 
      razao: Razón social
-     tipo: Tipo do estabelecimento
+     tipo: Tipo de establecimiento
      outro: Otros 
      email: E-mail
      telefone: Teléfono 
