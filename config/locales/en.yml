@@ -1,27 +1,32 @@
 en:
- pit: The best products for preserving vaccines, blood, organs and medicines
- suporte: Suporteyy
- atendimento: Atendimentoyy
- comercial: Comercialyy
- conheca_o_suporte: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos 
- conheca_o_atendimento: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
- conheca_o_comercial: Os melhores produtos para conservação de vacinas, sangue, órgãos e medicamentos
- inicio: Begin
+ suporte: Support
+ atendimento: Attendance
+ comercial: Commercial
+ inicio: Start
  sair: Get out
  entrar: Login
- editar: Edit
+ editar: To edit
  deletar: Delete
  cancelar: Cancel
+ enviar: To send
  visualizar: To view
  fora: Assistance outside Brazil
  dentro: Assists in Brazil
+ estabelecimento_medico: Medical establishment
+ revendedor_de_produtos: Product Resellers / Medical Equipment
+ orgao_publico: Public agency
+ estabelecimento_veterinario: Veterinary / Rural Producer Establishment
+ outro: Other
+ catalogo: Catalog
  activerecord:
   models:
-    ajuda: Questions and Answers
-    artigo: Articles
-    assistencia: Assists
+    ajuda: Questions and answers
+    artigo: News
+    assistencia: Support
     categoria: Categories
-    produto: Produtos@
+    produto: Products
+    contato: Contacts
+    orcamento: Budgeting
   attributes:
     ajuda:
      pergunta: Question
@@ -36,15 +41,37 @@ en:
      cidade: City
      endereco: Address
      telefone: Phone    
-     email: Email  
+     email: Email
      foto: Logo
     categoria:
      nome: Category name
-     descricao: Description 
+     descricao: Category Description
     produto:
-     categoria_id: Categoria
-     modelo: Modelo@
-     resumo: Resumo@ 
+     categoria_id: Category
+     modelo: Model 
+     resumo: Summary 
      descricao: Description
-     video: Video
-     foto: Photo
+     video: Vídeo
+     foto: Photograph
+    contato:
+     nome: Name 
+     razao: Social reason
+     tipo: Property type
+     outro: Other 
+     email: Email
+     telefone: Phone 
+     estado: State
+     cidade: City 
+     mensagem: Write your message here
+     created_at: Date
+    orcamento: 
+     nome: Name 
+     razao: Social reason
+     tipo: Property type
+     outro: Other 
+     email: Email
+     telefone: Phone 
+     estado: State
+     cidade: City 
+     mensagem: Write your message here
+     created_at: Date

@@ -1,23 +1,77 @@
 es:
- pit: Los mejores productos para la conservación de vacunas, sangre, órganos y medicamentos
- suporte: Soporte técnico
+ suporte: Soporte
  atendimento: Atención al cliente
  comercial: Comercial
- conheca_o_suporte: Los mejores productos para la conservación de vacunas, sangre, órganos y medicamentos
- conheca_o_atendimento: Los mejores productos para la conservación de vacunas, sangre, órganos y medicamentos
- conheca_o_comercial: Los mejores productos para la conservación de vacunas, sangre, órganos y medicamentos
- inicio: Inicio
+ inicio: Início
  sair: Salir
- entrar: Login
- editar: Edición
- deletar: Eliminar
+ entrar: Inicio
+ editar: Editar
+ deletar: Borrar
  cancelar: Cancelar
  enviar: Enviar
- visualizar: Vista previa
+ visualizar: Visualización
  fora: Asistencia fuera de Brasil
  dentro: Asistencia en Brasil
  estabelecimento_medico: Establecimiento médico
- revendedor_de_produtos: Distribuidor de productos / Equipos médicos
+ revendedor_de_produtos: Distribuidor de Productos / Equipos Médicos
  orgao_publico: Órgano público
  estabelecimento_veterinario: Establecimiento Veterinario / Productor Rural
  outro: Otros
+ catalogo: Catálogo
+ activerecord:
+  models:
+    ajuda: Preguntas y respuestas
+    artigo: Noticias
+    assistencia: Ayuda
+    categoria: Categorías
+    produto: Productos
+    contato: Contactos
+    orcamento: Presupuestos
+  attributes:
+    ajuda:
+     pergunta: Pergunta
+     resposta: Respuesta
+    artigo:
+     titulo: Título del artículo
+     resumo: Resumen
+     texto: Texto del artículo
+    assistencia:
+     nome: Nombre de la asistencia
+     estado: Estado 
+     cidade: Ciudad
+     endereco: Dirección
+     telefone: Teléfono    
+     email: Correo electrónico
+     foto: Logo
+    categoria:
+     nome: Nombre de la categoría
+     descricao: Descripción de la categoría
+    produto:
+     categoria_id: Categoría
+     modelo: Modelo 
+     resumo: Resumen 
+     descricao: Descripción
+     video: Vídeo
+     foto: Foto
+    contato:
+     nome: Nombre 
+     razao: Razón social
+     tipo: Tipo do estabelecimento
+     outro: Otros 
+     email: E-mail
+     telefone: Teléfono 
+     estado: Estado
+     cidade: Ciudad 
+     mensagem: Escriba aquí su mensaje
+     created_at: Data
+    orcamento: 
+     nome: Nome 
+     razao: Razón social
+     tipo: Tipo do estabelecimento
+     outro: Otros 
+     email: E-mail
+     telefone: Teléfono 
+     estado: Estado
+     cidade: Ciudad 
+     mensagem: Escriba aquí su mensaje
+     created_at: Data
