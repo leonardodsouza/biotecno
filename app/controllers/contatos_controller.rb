@@ -5,7 +5,7 @@ class ContatosController < ApplicationController
   # GET /contatos
   # GET /contatos.json
   def index
-    @contatos = Contato.all
+    @contatos = Contato.all.paginate(:page=> params[:page], :per_page => 2).order(created_at: :desc)
   end
 
   # GET /contatos/1

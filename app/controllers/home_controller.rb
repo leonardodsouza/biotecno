@@ -7,4 +7,8 @@ class HomeController < ApplicationController
     @pagina_1 = Pagina.find(1)
     @pagina_2 = Pagina.find(2)
   end
+
+  def bemvindo
+
+  end
 end

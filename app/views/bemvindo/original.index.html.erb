@@ -1,0 +1,32 @@
+<script>
+    $(document)
+        .ready(function() {
+        // reduz a velocidade do vídeo
+        var vid = document.getElementById("video");
+        vid.autoplay = true;
+            vid.defaultPlaybackRate = 0.7;
+            vid.load();
+    });
+</script>
+<div class="home">
+    <%= video_tag  "video.mov", id: "video", :autoplay => true, :loop => true%>
+    <div class="container">
+
+        <div class="row welcome center-align">
+                <%= image_tag "logo.png", class: "responsive-img logo" %>
+                <h2 class="center white-text">REFRIGERAÇÃO MÉDICA</h2>
+                <a style="width: 200px; margin-bottom: 1em;" class="waves-effect waves-light btn-large btn-outline" 
+                locale="pt" href="/pt/home">PORTUGUÊS</a>
+                <a style="width: 200px; margin-bottom: 1em;" class="waves-effect waves-light btn-large btn-outline" 
+                locale="en" href="/en/home">ENGLISH</a>
+                <a style="width: 200px; margin-bottom: 1em;" class="waves-effect waves-light btn-large btn-outline" 
+                locale="es" href="/es/home">ESPÃNOL</a>                 
+        </div>
+
+        <div class="row">
+            <div class="center-align">
+                <p class="white-text">BIOTECNO REFRIGERAÇÃO MÉDICA Conserving Life</p>
+            </div>
+        </div>
+    </div>
+</div>

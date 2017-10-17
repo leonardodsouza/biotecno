@@ -1,0 +1,108 @@
+<div class="navbar-fixed"> 
+        <ul id="dropdown1" class="dropdown-content">
+          <li><%= link_to "Português", locale: "pt"%></li>
+          <li><%= link_to "English", locale: "en" %></li>
+          <li><%= link_to "Español", locale: "es" %></li>
+        </ul>  
+        <nav class="nav-extended white">
+          <div class="nav-wrapper container">
+          
+            <%= link_to (image_tag  "logotipo.png", class: "responsive-img brand-logo hide-on-small-only"), home_path %>
+            <%= image_tag  "logotipo.png", class: "responsive-img brand-logo hide-on-large-only" %>
+            <ul class="right hide-on-med-and-down">
+              
+              <li><%= link_to Produto.model_name.human, produtos_path, class: "teal-text" %></li>
+              <li><%= link_to Artigo.model_name.human, artigos_path, class: "teal-text" %></li>
+              <li><%= link_to Video.model_name.human, videos_path, class: "teal-text" %></li>
+              <li><%= link_to t('suporte'), ajudas_path, class: "teal-text" %></li>
+              <li><%= link_to Contato.model_name.human, new_contato_path, class: "teal-text" %></li>
+              <li><a class="teal-text dropdown-button" href="#!" data-activates="dropdown1"><%= t('traduzir')%><i class="material-icons right">arrow_drop_down</i></a></li>
+              <% if usuario_signed_in? %>
+                <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "teal-text" %></li>
+              <%end%>
+              
+            </ul>
+    
+            <ul id="nav-mobile" class="side-nav">
+                <li><%= link_to  t('inicio'), root_path , class: "teal-text"%></li>
+                <li><%= link_to Produto.model_name.human, produtos_path, class: "teal-text" %></li>
+                <li><%= link_to Artigo.model_name.human, artigos_path, class: "teal-text" %></li>
+                <li><%= link_to Video.model_name.human, videos_path, class: "teal-text" %></li>
+                <li><%= link_to t('suporte'), ajudas_path, class: "teal-text" %></li>
+                <li><%= link_to Contato.model_name.human, new_contato_path, class: "teal-text" %></li>
+                <% if usuario_signed_in? %>
+                  <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "teal-text" %></li>
+                <%end%>
+    
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse show-on-small teal-text"><i class="material-icons">menu</i></a>
+          </div>
+          <div class="nav-content">
+            <br>
+    
+            <% if usuario_signed_in? %>
+              <!-- ################## AJUDAS ################# -->
+              <% if controller_name == 'ajudas' %>
+                <%= link_to new_ajuda_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+                  <i class="material-icons">add</i>
+                <%end%>
+              <%end%>
+              <!-- ################## CATEGORIAS ################# -->
+              <% if controller_name == 'home' %>
+                <%= link_to new_categoria_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+                  <i class="material-icons">add</i>
+                <%end%>
+              <%end%>
+              <!-- ################## ARTIGOS ################# -->
+              <% if controller_name == 'artigos' %>
+                <%= link_to new_artigo_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+                  <i class="material-icons">add</i>
+                <%end%>
+              <%end%>
+              <!-- ################## ASSISTENCIAS ################# -->
+              <% if controller_name == 'assistencias' %>
+                <%= link_to new_assistencia_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+                  <i class="material-icons">add</i>
+                <%end%>
+              <%end%>
+              <!-- ################## PRODUTOS ################# -->
+              <% if controller_name == 'produtos' %>
+                <%= link_to new_produto_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+                  <i class="material-icons">add</i>
+                <%end%>
+              <%end%>
+              <!-- ################## PRODUTOS ################# -->
+              <% if controller_name == 'videos' %>
+                <%= link_to new_video_path, class: "btn-floating btn-large halfway-fab waves-effect waves-light teal" do%>
+                  <i class="material-icons">add</i>
+                <%end%>
+              <%end%>
+              <!-- ################## dashboard ################# -->
+              <div class="container">
+                <div class="fixed-action-btn vertical click-to-toggle">
+                  <a class="btn-floating btn-large red">
+                    <i class="material-icons">menu</i>
+                  </a>
+                  <ul>
+                    <li>
+                      <%= link_to admin_path, class: "btn-floating red" do %>
+                        <i class="material-icons">insert_chart</i>
+                      <%end%>
+                    </li>
+                    <li>
+                      <%= link_to orcamentos_path, class: "btn-floating teal" do %>
+                        <i class="material-icons">monetization_on</i>
+                      <%end%>
+                    </li>
+                    <li>
+                      <%= link_to contatos_path, class: "btn-floating blue" do %>
+                        <i class="material-icons">email</i>
+                      <%end%>
+                    </li>
+                   </ul>
+                </div>
+              </div>
+            <%end%>  
+          </div>
+        </nav>
+      </div>

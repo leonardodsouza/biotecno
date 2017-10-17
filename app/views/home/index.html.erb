@@ -1,3 +1,4 @@
+<div class="home-video">
 <div class="parallax-container">
     <div class="section no-pad-bot">
         <div class="container">
@@ -15,7 +16,7 @@
             <br><br>
         </div>
     </div>
-    <div class="parallax"><%= image_tag @backgound_1.img.url %></div>
+    <%= video_tag  "video.mov", id: "video", :autoplay => true, :loop => true%>
 </div>
 
 <div class="home-1">
@@ -68,7 +69,7 @@
     </div>
     <div class="container">
         <div class="row center">
-            <p><%= raw(@pagina_1.texto) %></p>
+            <h5 class="header col s12 light"><%= raw(@pagina_1.texto) %></h5>
             <% if usuario_signed_in? %>
                 <%= link_to  "Editar", edit_pagina_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
             <%end%> 
@@ -97,17 +98,17 @@
     <div class="parallax"><%= image_tag @backgound_2.img.url %></div>
 </div>
 
-<div class="home-1">
+<div class="home-01">
     <div class="container">
         <div class="section">
             <div class="row">
                 <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h3 class="header center teal-text text-lighten-2"><%= @backgound_3.titulo %></h3>
+                   
+                    <h1 class="header center teal-text text-lighten-2"><%= @backgound_3.titulo %></h1>
                     <div class="row center">
-                        <p><%= raw(@backgound_3.descricao) %></p>
+                        <h5 class="header col s12 light"><%= raw(@backgound_3.descricao) %></h5>
                     </div>
-                    
+                   
                     <%= image_tag @backgound_3.img.url , class:"responsive-img"%>
                     <br>
                     <% if usuario_signed_in? %>
@@ -117,4 +118,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

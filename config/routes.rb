@@ -19,6 +19,6 @@ Rails.application.routes.draw do
     resources :paginas
     resources :videos
   end
-  root to: 'home#index'
+  root to: 'bemvindo#index'
   
 end
