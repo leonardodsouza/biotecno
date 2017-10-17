@@ -15,7 +15,7 @@
     <% if controller.controller_name != 'bemvindo' %>
       <%= render  "layouts/menu" %>
       <%= yield %>
-     
+      <%= render  "layouts/footer" %>
     <%else%>  
       <%= yield %>
     <%end%>    
