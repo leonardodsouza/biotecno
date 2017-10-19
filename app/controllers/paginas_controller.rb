@@ -5,7 +5,7 @@ class PaginasController < ApplicationController
   # GET /paginas
   # GET /paginas.json
   def index
-    @paginas = Pagina.all
+    @paginas = Pagina.all.order(:id)
   end
 
   # GET /paginas/1
