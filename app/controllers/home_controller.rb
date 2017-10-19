@@ -7,8 +7,4 @@ class HomeController < ApplicationController
     @pagina_1 = Pagina.find(1)
     @pagina_2 = Pagina.find(2)
   end
-
-  def bemvindo
-    @backgound_6 = Banner.find(6)
-  end
 end

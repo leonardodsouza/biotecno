@@ -13,8 +13,9 @@
     <div class="container">
 
         <div class="row welcome center-align">
-                <%= image_tag "logo.png", class: "responsive-img logo" %>
-                <h2 class="center white-text">REFRIGERAÇÃO MÉDICA</h2>
+                
+                <%= image_tag @backgound_7.img.url, class: "responsive-img logo" %>
+                <h2 class="center white-text"><%= raw(@backgound_7.titulo) %></h2>
                 <a style="width: 200px; margin-bottom: 1em;" class="waves-effect waves-light btn-large btn-outline" 
                 locale="pt" href="/pt/home">PORTUGUÊS</a>
                 <a style="width: 200px; margin-bottom: 1em;" class="waves-effect waves-light btn-large btn-outline" 
@@ -25,7 +26,10 @@
 
         <div class="row">
             <div class="center-align">
-                <p class="white-text">BIOTECNO REFRIGERAÇÃO MÉDICA Conserving Life</p>
+                <p class="white-text"><%= raw(@backgound_7.descricao) %></p>
+                <% if usuario_signed_in? %>
+                    <%= link_to  "Editar", edit_banner_path(7), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                <%end%> 
             </div>
         </div>
     </div>
