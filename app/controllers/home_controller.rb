@@ -9,6 +9,6 @@ class HomeController < ApplicationController
   end
 
   def bemvindo
-    @pagina_9 = Pagina.find(9)
+    @backgound_6 = Banner.find(6)
   end
 end

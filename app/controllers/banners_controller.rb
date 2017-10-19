@@ -5,7 +5,7 @@ class BannersController < ApplicationController
   # GET /banners
   # GET /banners.json
   def index
-    @banners = Banner.all
+    @banners = Banner.all.order(:id)
   end
 
   # GET /banners/1
