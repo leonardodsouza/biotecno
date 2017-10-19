@@ -9,6 +9,6 @@ class HomeController < ApplicationController
   end
 
   def bemvindo
-
+    @pagina_9 = Pagina.find(9)
   end
 end
