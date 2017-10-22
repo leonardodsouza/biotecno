@@ -8,11 +8,21 @@ class ProdutosController < ApplicationController
     @produtos = Produto.all
     @categorias = Categoria.all
     @backgound_4 = Banner.find(4)
+
+    @grafico = Grafico.new
+    @grafico.item = 'Produtos'
+    @grafico.save
   end
 
   # GET /produtos/1
   # GET /produtos/1.json
   def show
+
+    @visualizacao = Visualizacao.new
+    @visualizacao.modelo = @produto.modelo
+    @visualizacao.save
+
+    @produto.increment!(:visualizacoes)
   end
 
   # GET /produtos/new
@@ -74,6 +84,6 @@ class ProdutosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def produto_params
-      params.require(:produto).permit(:categoria_id, :foto, :modelo, :resumo, :descricao, :video)
+      params.require(:produto).permit(:categoria_id, :visualizacoes, :foto, :modelo, :resumo, :descricao, :video)
     end
 end

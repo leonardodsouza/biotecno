@@ -7,6 +7,10 @@ class VideosController < ApplicationController
   def index
     @videos = Video.all
     @pagina_6 = Pagina.find(6)
+
+    @grafico = Grafico.new
+    @grafico.item = 'Vídeos'
+    @grafico.save
   end
 
   # GET /videos/1

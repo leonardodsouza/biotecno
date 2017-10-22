@@ -6,5 +6,9 @@ class HomeController < ApplicationController
     @backgound_3 = Banner.find(3)
     @pagina_1 = Pagina.find(1)
     @pagina_2 = Pagina.find(2)
+
+    @grafico = Grafico.new
+    @grafico.item = 'Inicial'
+    @grafico.save
   end
 end

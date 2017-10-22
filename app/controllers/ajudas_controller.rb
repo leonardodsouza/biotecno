@@ -8,6 +8,12 @@ class AjudasController < ApplicationController
     @ajudas = Ajuda.all
     @assistencias = Assistencia.all
     @pagina_3 = Pagina.find(3)
+
+    @manutencao = Manutencao.new
+
+    @grafico = Grafico.new
+    @grafico.item = 'Perguntas e respostas'
+    @grafico.save
   end
 
   # GET /ajudas/1

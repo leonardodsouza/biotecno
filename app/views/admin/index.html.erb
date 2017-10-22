@@ -2,17 +2,66 @@
 <div class="wrapper">
     <div class="container">
         <h3 class="header center teal-text text-lighten-2">
-                <i class="material-icons">insert_chart</i>
-                Dashboard</h3>
+            <i class="material-icons">insert_chart</i>
+            Dashboard
+        </h3>
     </div>
 </div>
 <div class="container">
-<div class="row">
-
-    <div class="col s12">
-        <div class="card-panel">
-            <%= line_chart Produto.group_by_day(:created_at).count %>
-        </div>    
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+            <%= line_chart @visitas.group(:item).group_by_week(:created_at, format: "%b %d, %Y").count , discrete: true%>
+            </div>    
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col s8">
+            <div class="card-panel">
+            <%= pie_chart @visitas.group(:item).count %>
+            </div>    
+        </div>
+        <div class="col s4">
+            <div class="collection">
+                <a class="collection-item" >Inicial: <span class="badge" data-badge-caption="<%= total_inicial %>"></span></a>
+                <a class="collection-item" >Quem somos: <span class="badge" data-badge-caption="<%= total_quem_somos %>"></span></a>
+                <a class="collection-item" >Produtos: <span class="badge" data-badge-caption="<%= total_produtos %>"></span></a>
+                <a class="collection-item" >Notícias:<span class="badge" data-badge-caption="<%= total_noticias %>"></span></a>
+                <a class="collection-item" >Vídeos:<span class="badge" data-badge-caption="<%= total_videos %>"></span></a>
+                <a class="collection-item" >Assitências: <span class="badge" data-badge-caption="<%= total_assistencia %>"></span></a>
+                <a class="collection-item" >Perguntas:<span class="badge" data-badge-caption="<%= total_perguntas_e_respostas %>"></span></a>
+            </div>
+        </div>      
+    </div> 
+    
+    <h3 class="header center teal-text text-lighten-2">
+            <i class="material-icons">insert_chart</i>
+            Produtos
+        </h3>
+
+        <div class="row">
+                <div class="col s12">
+                    <div class="card-panel">
+                    <%= line_chart @visualizacoes.group(:modelo).group_by_week(:created_at, format: "%b %d, %Y").count , discrete: true%>
+                    </div>    
+                </div>
+            </div>
+    <div class="row">
+          
+            <div class="col s8">
+                <div class="card-panel">
+                <%= pie_chart @visualizacoes.group(:modelo).count %>
+                </div>    
+            </div>
+            <div class="col s4">
+            <div class="collection">
+                <% @produtos.each do |produto| %>
+                    <a class="collection-item" ><%= produto.modelo %><span class="badge" data-badge-caption="<%= produto.visualizacoes %>"></span></a>
+                   
+                <%end%>
+            </div>
+           </div>
+       
+    </div>
+
 </div>

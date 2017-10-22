@@ -5,7 +5,7 @@ class OrcamentosController < ApplicationController
   # GET /orcamentos
   # GET /orcamentos.json
   def index
-    @orcamentos = Orcamento.all
+    @orcamentos = Orcamento.all.paginate(:page=> params[:page], :per_page => 20).order(created_at: :desc)
   end
 
   # GET /orcamentos/1

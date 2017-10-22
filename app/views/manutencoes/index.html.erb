@@ -1,0 +1,43 @@
+<div class="wrapper">
+    <div class="container">
+        <h3 class="header center teal-text text-lighten-2">
+          <i class="material-icons">email</i>
+          <%= Manutencao.model_name.human %></h3>
+    </div>
+  </div>
+          
+  
+  <div class="container">
+  
+    <table class="responsive-table bordered">
+      <thead>
+        <tr>
+          <th><%= Manutencao.human_attribute_name(:created_at) %></th>
+          <th><%= Manutencao.human_attribute_name(:nome) %></th>
+          <th><%= Manutencao.human_attribute_name(:razao) %></th>
+          <th style="width: 5%;" colspan="2"></th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <% @manutencoes.each do |manutencao| %>
+          <tr>
+            <td><%= manutencao.created_at.strftime("%d/%m/%Y") %></td>
+            <td><%= manutencao.nome %></td>
+            <td><%= manutencao.razao %></td>
+            <td>
+              <%= link_to manutencao, class: "btn-floating" do%>
+                <i class="material-icons">email</i>
+              <%end%>
+            </td>
+            <td>
+              <%= link_to manutencao, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                <i class="material-icons">delete</i>
+              <%end%>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate @manutencoes %>
+  </div>

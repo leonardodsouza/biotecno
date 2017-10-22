@@ -1,14 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2"><%= t('quem_somos')%></h3>
+  </div>
+</div>
+            
+  <div class="container">
+    <div class="section">
+        
+        <%= link_to artigos_path, class: "btn-floating right" do%>
+          <i class="material-icons">arrow_back</i>
+        <%end%>
+        
+        <div class="social-likes social-likes_vertical waves-effect waves-light btn  indigo darken-4" data-counters="no" data-url=<%= full_url_for %> data-title="Facebook">
+          <div class="facebook" title="Share link on Facebook"><i class="material-icons left">share</i> Compartilhar</div>
+        </div>
+        
+        <br>
+        <div class="divider"></div>
+        <br>
+        <%= image_tag quem_somos.img.url, class:"responsive-img" %>  
+        <p><%= raw(quem_somos.descricao) %></p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @banner.titulo %>
-</p>
-
-<p>
-  <strong>Descricao:</strong>
-  <%= @banner.descricao %>
-</p>
-
-<%= link_to 'Edit', edit_banner_path(@banner) %> |
-<%= link_to 'Back', banners_path %>
+        <% if usuario_signed_in? %>
+        <%= link_to  "Editar", edit_banner_path(8), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+        <%end%> 
+    </div>
+  </div>    
+    

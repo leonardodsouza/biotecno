@@ -7,6 +7,10 @@ class AssistenciasController < ApplicationController
   def index
     @assistencias = Assistencia.all
     @backgound_6 = Banner.find(6)
+
+    @grafico = Grafico.new
+    @grafico.item = 'Assistências'
+    @grafico.save
   end
 
   # GET /assistencias/1

@@ -18,15 +18,20 @@ en:
  estabelecimento_veterinario: Veterinary / Rural Producer Establishment
  outro: Other
  catalogo: Catalog
+ solicitar: Request maintenance
+ manutencao: Maintenance
+ traduzir: Translate
  activerecord:
   models:
     ajuda: Questions and answers
     artigo: News
-    assistencia: Support
+    assistencia: Assistance
     categoria: Categories
     produto: Products
     contato: Contacts
     orcamento: Budgeting
+    manutencao: Maintenance
+    quem_somo: who we are
   attributes:
     ajuda:
      pergunta: Question
@@ -75,3 +80,13 @@ en:
      cidade: City 
      mensagem: Write your message here
      created_at: Date
+    manutencao:
+     nome: Nome 
+     razao: Razão social
+     modelo: Modelo do equipamento
+     email: E-mail
+     telefone: Telefone 
+     estado: Estado
+     cidade: Cidade 
+     solicitacao: Escreva aqui sua solicitação
+     created_at: Data

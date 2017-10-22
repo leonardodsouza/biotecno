@@ -7,6 +7,10 @@ class ArtigosController < ApplicationController
   def index
     @artigos = Artigo.all
     @pagina_4 = Pagina.find(4)
+
+    @grafico = Grafico.new
+    @grafico.item = 'Notícias'
+    @grafico.save
   end
 
   # GET /artigos/1

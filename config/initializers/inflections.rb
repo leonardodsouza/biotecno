@@ -12,6 +12,7 @@
     inflect.irregular 'assistencia', 'assistencias'
     inflect.irregular 'categoria', 'categorias'
     inflect.irregular 'pagina', 'paginas'
+    inflect.irregular 'manutencao', 'manutencoes'
  end
 
 # These inflection rules are supported but not enabled by default:

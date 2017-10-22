@@ -4,17 +4,27 @@
           <li><%= link_to "English", locale: "en" %></li>
           <li><%= link_to "Español", locale: "es" %></li>
         </ul>  
+        <ul id="dropdown2" class="dropdown-content">
+            <li><%= link_to t('suporte'), ajudas_path, class: "teal-text" %></li>
+            <li><%= link_to Assistencia.model_name.human, assistencias_path, class: "teal-text" %></li>
+            <li><%= link_to t('manutencao'), new_manutencao_path, class: "teal-text" %></li>
+        </ul>
+        <ul id="dropdown3" class="dropdown-content">
+            <li><%= link_to Video.model_name.human, videos_path, class: "teal-text" %></li>
+            <li><%= link_to Artigo.model_name.human, artigos_path, class: "teal-text" %></li>
+        </ul>
+        
+        
         <nav class="nav-extended white">
           <div class="nav-wrapper container">
           
             <%= link_to (image_tag  "logotipo.png", class: "responsive-img brand-logo hide-on-small-only"), home_path %>
             <%= image_tag  "logotipo.png", class: "responsive-img brand-logo hide-on-large-only" %>
             <ul class="right hide-on-med-and-down">
-              
+              <li><%= link_to QuemSomo.model_name.human, quem_somo_path(1), class: "teal-text" %></li>
               <li><%= link_to Produto.model_name.human, produtos_path, class: "teal-text" %></li>
-              <li><%= link_to Artigo.model_name.human, artigos_path, class: "teal-text" %></li>
-              <li><%= link_to Video.model_name.human, videos_path, class: "teal-text" %></li>
-              <li><%= link_to t('suporte'), ajudas_path, class: "teal-text" %></li>
+              <li><a class="teal-text dropdown-button" href="#!" data-activates="dropdown3"><%= t('midias')%><i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="teal-text dropdown-button" href="#!" data-activates="dropdown2"><%= t('suporte')%><i class="material-icons right">arrow_drop_down</i></a></li>
               <li><%= link_to Contato.model_name.human, new_contato_path, class: "teal-text" %></li>
               <li><a class="teal-text dropdown-button" href="#!" data-activates="dropdown1"><%= t('traduzir')%><i class="material-icons right">arrow_drop_down</i></a></li>
               <% if usuario_signed_in? %>
@@ -84,6 +94,11 @@
                     <i class="material-icons">menu</i>
                   </a>
                   <ul>
+                    <li>
+                      <%= link_to manutencoes_path, class: "btn-floating yellow" do %>
+                        <i class="material-icons">build</i>
+                      <%end%>
+                    </li>
                     <li>
                       <%= link_to admin_path, class: "btn-floating red" do %>
                         <i class="material-icons">insert_chart</i>

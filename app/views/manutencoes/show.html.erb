@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="container">
+      <h3 class="header center teal-text text-lighten-2">Solicitação de manutenção</h3>
+  </div>
+</div>
+          
+<div class="container">
+  <div class="section">
+      
+      <%= link_to manutencoes_path, class: "btn-floating right" do%>
+        <i class="material-icons">arrow_back</i>
+      <%end%>
+      
+      <h5><%= @manutencao.nome %></h5>
+      <div class="divider"></div>
+        
+        <p>
+          <b>Razao:</b>
+          <%= @manutencao.razao %> <br>
+      
+          <b>Tipo:</b>
+          <%= @manutencao.modelo %> <br>
+    
+          <b>Email:</b>
+          <%= @manutencao.email %> <br>
+    
+          <b>Telefone:</b>
+          <%= @manutencao.telefone %> <br>
+
+          <b>Estado:</b>
+          <%= @manutencao.estado %> <br>
+  
+          <b>Cidade:</b>
+          <%= @manutencao.cidade %> <br>
+        </p>
+        
+        <p class="msg">
+          <%= @manutencao.solicitacao %>
+        </p>
+        
+        <p><%= mail_to @manutencao.email, "Responder", class: "waves-effect waves-light btn" %></p>
+  </div>
+</div>
+  
+  

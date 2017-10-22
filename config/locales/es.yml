@@ -18,6 +18,9 @@ es:
  estabelecimento_veterinario: Establecimiento Veterinario / Productor Rural
  outro: Otros
  catalogo: Catálogo
+ solicitar: Solicitar mantenimiento
+ manutencao: Mantenimiento
+ traduzir: Traducir
  activerecord:
   models:
     ajuda: Preguntas y respuestas
@@ -27,6 +30,8 @@ es:
     produto: Productos
     contato: Contactos
     orcamento: Presupuestos
+    manutencao: Mantenimiento
+    quem_somo: Quienes somos
   attributes:
     ajuda:
      pergunta: Pergunta
@@ -74,4 +79,14 @@ es:
      estado: Estado
      cidade: Ciudad 
      mensagem: Escriba aquí su mensaje
+     created_at: Data
+    manutencao:
+     nome: Nome 
+     razao: Razão social
+     modelo: Modelo do equipamento
+     email: E-mail
+     telefone: Telefone 
+     estado: Estado
+     cidade: Cidade 
+     solicitacao: Escreva aqui sua solicitação
      created_at: Data
