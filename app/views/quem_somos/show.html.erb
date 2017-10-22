@@ -18,8 +18,8 @@
           <br>
           <div class="divider"></div>
           <br>
-          <%= image_tag quem_somos.img.url, class:"responsive-img" %>  
-          <p><%= raw(quem_somos.descricao) %></p>
+          <%= image_tag @quem_somo.img.url, class:"responsive-img" %>  
+          <p><%= raw(@quem_somo.texto) %></p>
   
           <% if usuario_signed_in? %>
           <%= link_to  "Editar", edit_quem_somo_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
