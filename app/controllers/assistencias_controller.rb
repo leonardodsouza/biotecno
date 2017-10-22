@@ -9,7 +9,7 @@ class AssistenciasController < ApplicationController
     @backgound_6 = Banner.find(6)
 
     @grafico = Grafico.new
-    @grafico.item = 'Assistências'
+    @grafico.item = 'Assistência'
     @grafico.save
   end
 
