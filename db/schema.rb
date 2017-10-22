@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022140621) do
+ActiveRecord::Schema.define(version: 20171022165141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -238,6 +238,17 @@ ActiveRecord::Schema.define(version: 20171022140621) do
     t.datetime "foto_updated_at"
     t.integer "visualizacoes"
     t.index ["categoria_id"], name: "index_produtos_on_categoria_id"
+  end
+
+  create_table "quem_somo_translations", force: :cascade do |t|
+    t.integer "quem_somo_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titulo"
+    t.text "texto"
+    t.index ["locale"], name: "index_quem_somo_translations_on_locale"
+    t.index ["quem_somo_id"], name: "index_quem_somo_translations_on_quem_somo_id"
   end
 
   create_table "quem_somos", force: :cascade do |t|

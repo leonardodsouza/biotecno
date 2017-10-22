@@ -1,4 +1,5 @@
 class QuemSomosController < ApplicationController
+  before_action :authenticate_usuario!, except: [:show]
   before_action :set_quem_somo, only: [:show, :edit, :update, :destroy]
 
   # GET /quem_somos

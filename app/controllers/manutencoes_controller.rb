@@ -1,4 +1,5 @@
 class ManutencoesController < ApplicationController
+  before_action :authenticate_usuario!, except: [:new, :create]
   before_action :set_manutencao, only: [:show, :edit, :update, :destroy]
 
   # GET /manutencoes
