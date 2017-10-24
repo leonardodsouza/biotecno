@@ -63,19 +63,6 @@
     </div>
 </div>    
 
-<div class="home-1 grey lighten-4">
-    <div class="row center">
-        <h3 class="header center teal-text text-lighten-2"><%= @pagina_1.titulo %></h3>
-    </div>
-    <div class="container">
-        <div class="row center">
-            <h5 class="header col s12 light"><%= raw(@pagina_1.texto) %></h5>
-            <% if usuario_signed_in? %>
-                <%= link_to  "Editar", edit_pagina_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
-            <%end%> 
-        </div>
-    </div>
-</div>
 
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -96,6 +83,20 @@
         </div>
     </div>
     <div class="parallax"><%= image_tag @backgound_2.img.url %></div>
+</div>
+
+<div class="home-1 grey lighten-4">
+    <div class="row center">
+        <h3 class="header center teal-text text-lighten-2"><%= @pagina_1.titulo %></h3>
+    </div>
+    <div class="container">
+        <div class="row center">
+            <h5 class="header col s12 light"><%= raw(@pagina_1.texto) %></h5>
+            <% if usuario_signed_in? %>
+                <%= link_to  "Editar", edit_pagina_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+            <%end%> 
+        </div>
+    </div>
 </div>
 
 <div class="home-01">
