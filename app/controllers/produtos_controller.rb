@@ -5,8 +5,8 @@ class ProdutosController < ApplicationController
   # GET /produtos
   # GET /produtos.json
   def index
-    @produtos = Produto.all
-    @categorias = Categoria.all
+    @produtos = Produto.all.order(:id)
+    @categorias = Categoria.all.order(:id)
     @backgound_4 = Banner.find(4)
 
     @grafico = Grafico.new
