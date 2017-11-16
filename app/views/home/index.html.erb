@@ -1,22 +1,23 @@
-<div class="home-video">
-<div class="parallax-container">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <br><br>
-            <h1 class="header center teal-text text-lighten-2"><%= @backgound_1.titulo %></h1>
-            <div class="row center">
-                <h5 class="header col s12 light"><%= raw(@backgound_1.descricao) %></h5>
-            </div>
-            <div class="row center">
-                <%= link_to  "Produtos", produtos_path, class: "btn-large waves-effect waves-light teal lighten-1"  %>
-                <% if usuario_signed_in? %>
-                    <%= link_to  "Editar", edit_banner_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
-                <%end%>    
-            </div>
-            <br><br>
+<div class="parallax-container parallax-container-two valign-wrapper">
+<div class="section no-pad-bot">
+    <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2"><%= @backgound_1.titulo %></h1>
+        <div class="row center">
+            <h5 class="header col s12 light"><%= raw(@backgound_1.descricao) %></h5>
         </div>
+        <div class="row center">
+            <% if usuario_signed_in? %>
+            <%= link_to  "Produtos", produtos_path, class: "btn-large waves-effect waves-light teal lighten-1"  %>
+            <% if usuario_signed_in? %>
+                <%= link_to  "Editar", edit_banner_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+            <%end%>
+            <%end%>    
+        </div>
+        <br><br>
     </div>
-    <%= video_tag  "video.mp4", id: "video", :autoplay => true, :loop => true%>
+</div>
+<div class="parallax"><%= image_tag @backgound_1.img.url , class:"responsive-img"%></div>
 </div>
 
 <div class="home-1">
