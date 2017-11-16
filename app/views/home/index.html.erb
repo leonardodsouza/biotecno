@@ -88,19 +88,27 @@
 
 <div class="home-1 grey lighten-4">
     <div class="row center">
-        <h3 class="header center teal-text text-lighten-2"><%= @pagina_1.titulo %></h3>
+        <h3 class="header center teal-text text-lighten-2"><%= @backgound_1.titulo %></h3>
     </div>
     <div class="container">
-        <div class="row center">
-            <h5 class="header col s12 light"><%= raw(@pagina_1.texto) %></h5>
+        <div class="row ">
+            <div class="col s4">
+                <%= link_to ajudas_path do %>
+                <%= image_tag @backgound_1.img.url , class:"responsive-img"%>
+                <%end%>
+            </div>
+            <div class="col s8">
+                <h5 class="header col s12 light"><%= raw(@backgound_1.descricao) %></h5>
+            </div>
+            
             <% if usuario_signed_in? %>
-                <%= link_to  "Editar", edit_pagina_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+                <%= link_to  "Editar", edit_banner_path(7), class: "btn-large waves-effect waves-light teal lighten-1"  %>
             <%end%> 
         </div>
     </div>
 </div>
 
-<div class="home-01">
+<div class="home-001">
     <div class="container">
         <div class="section">
             <div class="row">
@@ -108,7 +116,7 @@
                    
                     <h1 class="header center teal-text text-lighten-2"><%= @backgound_3.titulo %></h1>
                     <div class="row center">
-                        <h5 class="header col s12 light"><%= raw(@backgound_3.descricao) %></h5>
+                        <h5 class="header col s12 darken-1"><%= raw(@backgound_3.descricao) %></h5>
                     </div>
                    
                     <%= image_tag @backgound_3.img.url , class:"responsive-img"%>
