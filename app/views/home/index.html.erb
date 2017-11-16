@@ -88,17 +88,17 @@
 
 <div class="home-1 grey lighten-4">
     <div class="row center">
-        <h3 class="header center teal-text text-lighten-2"><%= @backgound_1.titulo %></h3>
+        <h3 class="header center teal-text text-lighten-2"><%= @backgound_7.titulo %></h3>
     </div>
     <div class="container">
         <div class="row ">
             <div class="col s4">
                 <%= link_to ajudas_path do %>
-                <%= image_tag @backgound_1.img.url , class:"responsive-img"%>
+                <%= image_tag @backgound_7.img.url , class:"responsive-img"%>
                 <%end%>
             </div>
             <div class="col s8">
-                <h5 class="header col s12 light"><%= raw(@backgound_1.descricao) %></h5>
+                <h5 class="header col s12 light"><%= raw(@backgound_7.descricao) %></h5>
             </div>
             
             <% if usuario_signed_in? %>
