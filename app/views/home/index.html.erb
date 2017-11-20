@@ -8,7 +8,7 @@
         </div>
         <div class="row center">
             <% if usuario_signed_in? %>
-            <%= link_to  "Produtos", produtos_path, class: "btn-large waves-effect waves-light teal lighten-1"  %>
+            <%= link_to  Produto.model_name.human, produtos_path, class: "btn-large waves-effect waves-light teal lighten-1"  %>
             <% if usuario_signed_in? %>
                 <%= link_to  "Editar", edit_banner_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
             <%end%>
@@ -48,7 +48,7 @@
                             </div>
                         <%else%> 
                             <div class="card-action">
-                                <%= link_to  "Produtos", produtos_path  %>
+                                <%= link_to  Produto.model_name.human, produtos_path  %>
                             </div>
                         <%end%>    
                         </div>
