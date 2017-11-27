@@ -15,7 +15,7 @@
       <div class="divider"></div>        
       <div class="gallery">
         <ul id="lightgallery" class="list-unstyled row">
-          <li data-responsive="<%= @produto.foto.url %>" data-src="<%= @produto.foto.url %>" data-sub-html="Foto do imóvel">
+          <li data-responsive="<%= @produto.foto.url %>" data-src="<%= @produto.foto.url %>" data-sub-html="Foto do produto">
             <a href="">
               <%= image_tag @produto.foto.url(:medium), class: "responsive-img img-capa"%>
             </a>
