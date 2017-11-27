@@ -1,14 +1,7 @@
 <footer class="page-footer teal">
 <div class="container">
     <div class="row">
-    <div class="col l6 s12">
-        <h5 class="white-text"><%= footer.titulo %></h5>
-        <p class="grey-text text-lighten-4"><%= raw(footer.texto) %></p>
-        <% if usuario_signed_in? %>
-        <%= link_to  "Editar", edit_pagina_path(8), class: "btn-large waves-effect waves-light teal lighten-1"  %>
-        <%end%> 
-    </div>
-    <div class="col l4 offset-l2 s12">
+    <div class="col l2  s12">
         <ul>
         <li><%= link_to  t('inicio'), root_path , class: "grey-text text-lighten-3"%></li>
         <li><%= link_to Produto.model_name.human, produtos_path, class: "grey-text text-lighten-3" %></li>
@@ -22,6 +15,14 @@
         <%end%>            
         </ul>
     </div>
+    <div class="col l10 s12">
+        <h5 class="white-text"><%= footer.titulo %></h5>
+        <p class="grey-text text-lighten-4"><%= raw(footer.texto) %></p>
+        <% if usuario_signed_in? %>
+        <%= link_to  "Editar", edit_pagina_path(8), class: "btn-large waves-effect waves-light teal lighten-1"  %>
+        <%end%> 
+    </div>
+
     </div>
 </div>
 <div class="footer-copyright">
