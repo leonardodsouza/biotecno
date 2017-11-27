@@ -5,7 +5,7 @@
 </div>
 <div class="container">
   <div class="row">
-      <% for categoria in Categoria.all %>
+      <% for categoria in Categoria.all.order(nome: :asc) %>
       <% if Produto.find_by_categoria_id(categoria.id) %>
         <div class="card-panel hoverable">
           <div class="card-content">
