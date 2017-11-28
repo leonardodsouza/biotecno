@@ -7,9 +7,9 @@
   <div class="row">
       <% for categoria in Categoria.all.order(nome: :asc) %>
       <% if Produto.find_by_categoria_id(categoria.id) %>
-        <div class="card-panel hoverable">
-          <div class="card-content">
-            <h4 class="header teal-text text-lighten-2"> <%= categoria.nome %></h4>
+        <div class="card-panel hoverable" style="background: <%= categoria.classe %>;">
+          <div class="card-content" style="color: <%= categoria.texto %>;">
+            <h4 class="header text-lighten-2" style="color: <%= categoria.titulo %>;"> <%= categoria.nome %></h4>
             <span> <%= raw(categoria.descricao) %></span>
           </div>
         </div>    

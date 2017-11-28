@@ -34,6 +34,27 @@
     </div>  
   </div>
 
+  <hr>
+
+  <div class="row">
+      <div class="input-field col s12">
+        <%= form.text_field :classe, id: :categoria_classe %>
+        <%= form.label :classe %>
+      </div>  
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <%= form.text_field :titulo, id: :categoria_titulo %>
+          <%= form.label :titulo %>
+        </div>  
+      </div>
+      <div class="row">
+          <div class="input-field col s12">
+            <%= form.text_field :texto, id: :categoria_texto %>
+            <%= form.label :texto %>
+          </div>  
+        </div>
+
   <div class="row">
     <div class="input-field col s12">
       <%= form.submit class: "waves-effect waves-light btn" %>
