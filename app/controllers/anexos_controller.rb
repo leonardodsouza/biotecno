@@ -1,5 +1,5 @@
 class AnexosController < ApplicationController
-  before_action :authenticate_usuario!, except: [:index]
+  before_action :authenticate_usuario!
   before_action :set_anexo, only: [:show, :edit, :update, :destroy]
 
   # GET /anexos
