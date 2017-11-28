@@ -5,7 +5,7 @@ class ProdutosController < ApplicationController
   # GET /produtos
   # GET /produtos.json
   def index
-    @produtos = Produto.all.order(modelo: :desc)
+    @produtos = Produto.all.order(ordem: :asc)
     @categorias = Categoria.all.order(:id)
     @backgound_4 = Banner.find(4)
 
@@ -84,6 +84,6 @@ class ProdutosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def produto_params
-      params.require(:produto).permit(:categoria_id, :visualizacoes, :foto, :modelo, :resumo, :descricao, :video)
+      params.require(:produto).permit(:categoria_id, :ordem, :visualizacoes, :foto, :modelo, :resumo, :descricao, :video)
     end
 end

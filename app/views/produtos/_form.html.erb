@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :ordem, id: :produto_ordem, required: true %>
+      <%= form.label :ordem %>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="file-field input-field col s12">
       <div class="btn">
         <span><%= t('foto') %></span>

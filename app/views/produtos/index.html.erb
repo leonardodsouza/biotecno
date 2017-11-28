@@ -15,7 +15,7 @@
         </div>    
       <% end %>
      
-        <% for produto in Produto.where('categoria_id = ?', categoria.id).order(modelo: :asc) %>
+        <% for produto in Produto.where('categoria_id = ?', categoria.id).order(ordem: :asc) %>
           <div class="card horizontal hoverable">
             <div class="card-image">
               <%= link_to (image_tag produto.foto.url(:lista)), produto, class: "responsive-img" %>
