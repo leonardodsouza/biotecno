@@ -31,7 +31,9 @@
                     <h4 class="center teal-text text-lighten-2"><%= categoria.nome %></h4>
                     <div class="card horizontal hide-on-small-only">
                         <div class="card-image">
-                            <%= image_tag categoria.img.url(:medium) %>
+                            <%= link_to produtos_path  %>
+                                <%= image_tag categoria.img.url(:medium) %>
+                            <%end%>
                         </div>
                         <div class="card-stacked">
                         <div class="card-content">
@@ -55,7 +57,9 @@
                     </div>
                     <div class="card hide-on-large-only">
                         <div class="card-image">
-                            <%= image_tag categoria.img.url(:medium) %>
+                            <%= link_to produtos_path  %>
+                                <%= image_tag categoria.img.url(:medium) %>
+                            <%end%>    
                         </div>
                     </div>
                 </div>                 
