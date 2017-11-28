@@ -9,6 +9,7 @@
         <li><%= link_to Video.model_name.human, videos_path, class: "grey-text text-lighten-3" %></li>
         <li><%= link_to Assistencia.model_name.human, assistencias_path, class: "grey-text text-lighten-3" %></li>
         <li><%= link_to t('suporte'), ajudas_path, class: "grey-text text-lighten-3" %></li>
+        <li><%= link_to t('documentos'), ajudas_path, class: "grey-text text-lighten-3" %></li>
         <li><%= link_to Contato.model_name.human, new_contato_path, class: "grey-text text-lighten-3" %></li>
         <% if usuario_signed_in? %>
             <li><%= link_to t('sair'), destroy_usuario_session_path, method: :delete, class: "grey-text text-lighten-3" %></li>

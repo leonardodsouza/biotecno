@@ -24,6 +24,13 @@
     </div>
 
     <div class="row">
+      <div class="input-field col s12">
+        <%= form.text_field :serie, id: :manutencao_serie, required: true %>
+        <%= form.label :serie %>
+      </div>
+    </div>
+
+    <div class="row">
         <div class="input-field col s12">
           <%= form.text_field :email, id: :manutencao_email , required: true%>
           <%= form.label :email %>

@@ -70,6 +70,6 @@ class ManutencoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def manutencao_params
-      params.require(:manutencao).permit(:nome, :razao, :modelo, :email, :telefone, :estado, :cidade, :solicitacao)
+      params.require(:manutencao).permit(:nome, :serie, :razao, :modelo, :email, :telefone, :estado, :cidade, :solicitacao)
     end
 end

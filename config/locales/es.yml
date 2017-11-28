@@ -22,6 +22,10 @@ es:
  solicitar: Solicitar mantenimiento
  manutencao: Mantenimiento
  traduzir: Traducir
+ documentos: Documentos
+ solicitacao: Solicitar mantenimiento
+ assistencia: Asistencia técnica
+ perguntas: Preguntas y respuestas
  activerecord:
   models:
     ajuda: Preguntas y respuestas
@@ -91,3 +95,4 @@ es:
      cidade: Cidade 
      solicitacao: Escreva aqui sua solicitação
      created_at: Data
+     serie: Numero de serie

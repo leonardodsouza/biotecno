@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="container">
+        <h5 class="header teal-text text-lighten-2"><%= Anexo.model_name.human %></h5>
+    </div>
+  </div>
+  <div class="container">
+    <table>    
+      <tbody>
+        <% @anexos.each do |anexo| %>
+          <tr>
+            <td><%= link_to anexo.nome, anexo.arquivo.url %></td>
+            <td><%= anexo.legenda %></td>
+            <% if usuario_signed_in? %>
+            <td>
+                <%= link_to edit_anexo_path(anexo), class: "btn-floating" do %>
+                <i class="material-icons">edit</i>
+              <%end%>
+            <td>
+                <%= link_to anexo, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                <i class="material-icons">delete</i>
+              <%end%>
+            </td>
+            <%end%>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div> 
+  

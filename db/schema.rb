@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022165141) do
+ActiveRecord::Schema.define(version: 20171128075706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(version: 20171022165141) do
     t.text "resposta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "anexos", force: :cascade do |t|
+    t.string "nome"
+    t.text "legenda"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "arquivo_file_name"
+    t.string "arquivo_content_type"
+    t.integer "arquivo_file_size"
+    t.datetime "arquivo_updated_at"
   end
 
   create_table "artigo_translations", force: :cascade do |t|
@@ -177,6 +188,7 @@ ActiveRecord::Schema.define(version: 20171022165141) do
     t.string "solicitacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "serie"
   end
 
   create_table "orcamentos", force: :cascade do |t|

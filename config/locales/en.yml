@@ -22,6 +22,14 @@ en:
  solicitar: Request maintenance
  manutencao: Maintenance
  traduzir: Translate
+ documentos: Documents
+ solicitacao: Request maintenance
+ assistencia: Technical assistance
+ perguntas: Questions and answers
+ documentos: Documents
+ solicitacao: Request maintenance
+ assistencia: Technical assistance
+ perguntas: Questions and answers
  activerecord:
   models:
     ajuda: Questions and answers
@@ -91,3 +99,4 @@ en:
      cidade: Cidade 
      solicitacao: Escreva aqui sua solicitação
      created_at: Data
+     serie: Serial number

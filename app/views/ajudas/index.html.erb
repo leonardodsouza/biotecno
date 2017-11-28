@@ -16,9 +16,10 @@
 
 <div class="container z-depth-2">
     <ul class="tabs">
-      <li class="tab col s3"><a class="active" href="#test1">Perguntas e respostas</a></li>
-      <li class="tab col s3"><a class="active" href="#test2">Assistência técnica</a></li>
-      <li class="tab col s3"><a class="active" href="#test3">Solicitar manutenção</a></li>
+      <li class="tab col s3"><a class="active" href="#test1"><%= t('perguntas') %></a></li>
+      <li class="tab col s3"><a class="active" href="#test2"><%= t('assistencia') %></a></li>
+      <li class="tab col s3"><a class="active" href="#test3"><%= t('solicitacao') %></a></li>
+      <li class="tab col s3"><a class="active" href="#test4"><%= t('documentos') %></a></li>
       
     </ul>
   
@@ -77,4 +78,12 @@
     <div id="test3" class="col s12">
         <%= render 'manutencoes/form', manutencao: @manutencao %>
     </div>
+    <div id="test4" class="col s12">
+      <%= render 'anexos/lista', anexos: @anexos %>
+      <br><br>
+    </div>
+    
 </div>
+<br>
+<br>
+<br>

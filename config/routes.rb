@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   
   
+  resources :anexos
   mount Ckeditor::Engine => '/ckeditor'
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     get 'home' => 'home#index', :as => 'home'

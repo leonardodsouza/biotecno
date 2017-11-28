@@ -7,6 +7,7 @@ class AjudasController < ApplicationController
   def index
     @ajudas = Ajuda.all
     @assistencias = Assistencia.all
+    @anexos = Anexo.all
     @pagina_3 = Pagina.find(3)
 
     @manutencao = Manutencao.new

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @anexo.nome %>
+</p>
+
+<p>
+  <strong>Legenda:</strong>
+  <%= @anexo.legenda %>
+</p>
+
+<%= link_to 'Edit', edit_anexo_path(@anexo) %> |
+<%= link_to 'Back', anexos_path %>

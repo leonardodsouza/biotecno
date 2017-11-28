@@ -22,6 +22,10 @@ pt:
  solicitar: Solicitar manutenção
  manutencao: Manutenção
  traduzir: Traduzir
+ documentos: Documentos
+ solicitacao: Solicitar manutenção
+ assistencia: Assistência técnica
+ perguntas: Perguntas e respostas
  activerecord:
   models:
     ajuda: Perguntas e respostas
@@ -33,6 +37,7 @@ pt:
     orcamento: Orçamentos
     manutencao: Manutenções
     quem_somo: Quem somos
+    anexo: Anexos
   attributes:
     ajuda:
      pergunta: Pergunta
@@ -91,5 +96,6 @@ pt:
      cidade: Cidade 
      solicitacao: Escreva aqui sua solicitação
      created_at: Data
+     serie: Número de série
      
       
