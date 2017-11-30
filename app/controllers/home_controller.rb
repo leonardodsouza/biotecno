@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @categorias = Categoria.all.order(:id)
+    @categorias = Categoria.all.order(ordem: :asc)
     @backgound_1 = Banner.find(1)
     @backgound_2 = Banner.find(2)
     @backgound_3 = Banner.find(3)
