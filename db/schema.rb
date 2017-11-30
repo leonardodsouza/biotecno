@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171128120621) do
+ActiveRecord::Schema.define(version: 20171130170619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -125,6 +125,7 @@ ActiveRecord::Schema.define(version: 20171128120621) do
     t.string "classe"
     t.string "titulo"
     t.string "texto"
+    t.integer "ordem", default: 1
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

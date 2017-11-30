@@ -11,6 +11,13 @@
     </div>
   <% end %>
   
+  <div class="row">
+      <div class="input-field col s12">
+        <%= form.text_field :ordem, id: :categoria_ordem, required: true %>
+        <%= form.label :ordem %>
+      </div>
+    </div>
+
   <div class="file-field input-field col s4">
     <div class="btn">
       <span><%= t('img') %></span>
@@ -43,17 +50,17 @@
       </div>  
     </div>
     <div class="row">
-        <div class="input-field col s12">
-          <%= form.text_field :titulo, id: :categoria_titulo %>
-          <%= form.label :titulo %>
-        </div>  
-      </div>
-      <div class="row">
-          <div class="input-field col s12">
-            <%= form.text_field :texto, id: :categoria_texto %>
-            <%= form.label :texto %>
-          </div>  
-        </div>
+      <div class="input-field col s12">
+        <%= form.text_field :titulo, id: :categoria_titulo %>
+        <%= form.label :titulo %>
+      </div>  
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= form.text_field :texto, id: :categoria_texto %>
+        <%= form.label :texto %>
+      </div>  
+    </div>
 
   <div class="row">
     <div class="input-field col s12">
