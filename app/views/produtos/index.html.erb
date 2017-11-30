@@ -54,7 +54,9 @@
       <div style="position: fixed; top: 200px; ">
         <ul class="section table-of-contents">
           <% for categoria in Categoria.all.order(nome: :asc) %>
+          <% if Produto.find_by_categoria_id(categoria.id) %>
             <li><a href="#<%= categoria.id%>"><%= categoria.nome%></a></li>
+          <%end%>  
           <%end%>  
         </ul>
       </div>
