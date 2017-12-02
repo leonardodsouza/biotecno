@@ -90,13 +90,13 @@ en:
      mensagem: Write your message here
      created_at: Date
     manutencao:
-     nome: Nome 
-     razao: Razão social
-     modelo: Modelo do equipamento
+     nome: Name 
+     razao: Social reason
+     modelo: Equipment model
      email: E-mail
-     telefone: Telefone 
-     estado: Estado
-     cidade: Cidade 
-     solicitacao: Escreva aqui sua solicitação
-     created_at: Data
+     telefone: Telephone 
+     estado: State
+     cidade: City 
+     solicitacao: Write your request here
+     created_at: Date
      serie: Serial number

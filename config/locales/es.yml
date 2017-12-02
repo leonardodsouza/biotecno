@@ -86,13 +86,13 @@ es:
      mensagem: Escriba aquí su mensaje
      created_at: Data
     manutencao:
-     nome: Nome 
-     razao: Razão social
-     modelo: Modelo do equipamento
+     nome: Nombre 
+     razao: Razón social
+     modelo: Modelo del equipo
      email: E-mail
-     telefone: Telefone 
+     telefone: Teléfono
      estado: Estado
-     cidade: Cidade 
-     solicitacao: Escreva aqui sua solicitação
-     created_at: Data
-     serie: Numero de serie
+     cidade: Ciudad 
+     solicitacao: Escriba aquí su solicitud
+     created_at: Fecha
+     serie: Serial number
