@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130170619) do
+ActiveRecord::Schema.define(version: 20171202125536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -236,6 +236,7 @@ ActiveRecord::Schema.define(version: 20171130170619) do
     t.datetime "updated_at", null: false
     t.text "resumo"
     t.text "descricao"
+    t.string "modelo"
     t.index ["locale"], name: "index_produto_translations_on_locale"
     t.index ["produto_id"], name: "index_produto_translations_on_produto_id"
   end
