@@ -22,7 +22,7 @@ pt:
  solicitar: Solicitar manutenção
  manutencao: Manutenção
  traduzir: Traduzir
- documentos: Documentos
+ documentos: Downloads
  solicitacao: Solicitar manutenção
  assistencia: Assistência técnica
  perguntas: Perguntas e respostas
@@ -36,7 +36,7 @@ pt:
     contato: Contatos
     orcamento: Orçamentos
     manutencao: Manutenções
-    quem_somo: Quem somos
+    quem_somo: Nossa Histório
     anexo: Anexos
   attributes:
     ajuda:

@@ -22,11 +22,11 @@ en:
  solicitar: Request maintenance
  manutencao: Maintenance
  traduzir: Translate
- documentos: Documents
+ documentos: Downloads
  solicitacao: Request maintenance
  assistencia: Technical assistance
  perguntas: Questions and answers
- documentos: Documents
+ documentos: Downloads
  solicitacao: Request maintenance
  assistencia: Technical assistance
  perguntas: Questions and answers
@@ -40,7 +40,7 @@ en:
     contato: Contacts
     orcamento: Budgeting
     manutencao: Maintenance
-    quem_somo: Who we are
+    quem_somo: Our story
   attributes:
     ajuda:
      pergunta: Question
