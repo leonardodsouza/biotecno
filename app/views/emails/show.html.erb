@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contato 01:</strong>
+  <%= @email.contato_01 %>
+</p>
+
+<p>
+  <strong>Contato 02:</strong>
+  <%= @email.contato_02 %>
+</p>
+
+<p>
+  <strong>Manutencao 01:</strong>
+  <%= @email.manutencao_01 %>
+</p>
+
+<p>
+  <strong>Manutencao 02:</strong>
+  <%= @email.manutencao_02 %>
+</p>
+
+<p>
+  <strong>Orcamento 01:</strong>
+  <%= @email.orcamento_01 %>
+</p>
+
+<p>
+  <strong>Orcamento 02:</strong>
+  <%= @email.orcamento_02 %>
+</p>
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

@@ -27,9 +27,13 @@ class ContatosController < ApplicationController
   # POST /contatos.json
   def create
     @contato = Contato.new(contato_params)
-
+    @email = Email.find(1)
     respond_to do |format|
       if @contato.save
+
+        EmailMailer.contato(@contato, @email).deliver_now        
+
+
         format.html { redirect_to new_contato_path, notice: 'Mensagem enviada com sucesso.' }
         format.json { render :show, status: :created, location: @contato }
       else

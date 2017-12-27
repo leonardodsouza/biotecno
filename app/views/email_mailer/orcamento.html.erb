@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+      <h5><%= @orcamento.nome %></h5>
+      
+      <p>
+        <b>Produto:</b>
+        <%= @orcamento.produto.modelo %> <br>
+    
+        <b>Razao:</b>
+        <%= @orcamento.razao %> <br>
+    
+        <b>Tipo:</b>
+        <%= @orcamento.tipo %> <br>
+    
+        <b>Email:</b>
+        <%= @orcamento.email %> <br>
+    
+        <b>Telefone:</b>
+        <%= @orcamento.telefone %> <br>
+    
+        <b>Estado:</b>
+        <%= @orcamento.estado %> <br>
+    
+        <b>Cidade:</b>
+        <%= @orcamento.cidade %> <br>
+        
+    
+      </p>
+      
+      <p>
+        <%= @orcamento.mensagem %>
+      </p>
+
+  </body>
+</html>
+
+

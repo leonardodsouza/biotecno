@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   
-  
-  
-  
-  
-  resources :anexos
   mount Ckeditor::Engine => '/ckeditor'
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     get 'home' => 'home#index', :as => 'home'
@@ -23,6 +18,8 @@ Rails.application.routes.draw do
     resources :videos
     resources :quem_somos
     resources :manutencoes
+    resources :emails
+    resources :anexos
   end
   root to: 'bemvindo#index'
   

@@ -28,9 +28,13 @@ class OrcamentosController < ApplicationController
   # POST /orcamentos.json
   def create
     @orcamento = Orcamento.new(orcamento_params)
-
+    @email = Email.find(1)
     respond_to do |format|
       if @orcamento.save
+
+        EmailMailer.orcamento(@orcamento, @email).deliver_now  
+
+
         format.html { redirect_to produto_path(@orcamento.produto_id), notice: 'Orcamento was successfully created.' }
         format.json { render :show, status: :created, location: @orcamento }
       else

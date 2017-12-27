@@ -26,9 +26,12 @@ class ManutencoesController < ApplicationController
   # POST /manutencoes.json
   def create
     @manutencao = Manutencao.new(manutencao_params)
-
+    @email = Email.find(1)
     respond_to do |format|
       if @manutencao.save
+
+        EmailMailer.manutencao(@manutencao, @email).deliver_now   
+
         format.html { redirect_to ajudas_path, notice: 'Manutencao was successfully created.' }
         format.json { render :show, status: :created, location: @manutencao }
       else

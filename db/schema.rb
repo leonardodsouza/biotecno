@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171202125536) do
+ActiveRecord::Schema.define(version: 20171227102204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,17 @@ ActiveRecord::Schema.define(version: 20171202125536) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "emails", force: :cascade do |t|
+    t.string "contato_01"
+    t.string "contato_02"
+    t.string "manutencao_01"
+    t.string "manutencao_02"
+    t.string "orcamento_01"
+    t.string "orcamento_02"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "estados", force: :cascade do |t|
     t.string "sigla"
     t.string "nome"
@@ -179,6 +190,23 @@ ActiveRecord::Schema.define(version: 20171202125536) do
     t.date "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "manutencao_translations", force: :cascade do |t|
+    t.integer "manutencao_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "nome"
+    t.string "razao"
+    t.string "modelo"
+    t.string "email"
+    t.string "telefone"
+    t.string "estado"
+    t.string "cidade"
+    t.string "solicitacao"
+    t.index ["locale"], name: "index_manutencao_translations_on_locale"
+    t.index ["manutencao_id"], name: "index_manutencao_translations_on_manutencao_id"
   end
 
   create_table "manutencoes", force: :cascade do |t|
