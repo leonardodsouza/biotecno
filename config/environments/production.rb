@@ -92,15 +92,13 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address  => "smtp.humanizerh.com.br",
-    :host => "humanizerh.com.br",
-    :port  => 587,
-    :domain => "humanizerh.com.br",
-    :user_name  => "humanize@humanizerh.com.br",
-    :password  => "leojaqjar@2015",
-    :authentication       => "plain",
-    :enable_starttls_auto => true,
-    :openssl_verify_mode  => 'none'
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            'biotecno01@gmail.com',
+    password:             'biotecnoconservinglife',
+    authentication:       'plain',
+    enable_starttls_auto: true  
   }
 
 end
