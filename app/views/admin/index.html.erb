@@ -51,7 +51,8 @@
             <div class="col s8">
                 <div class="card-panel">
                 <%= pie_chart @visualizacoes.group(:modelo).count %>
-                </div>    
+                </div>
+                <%= link_to  "Zerar contagem", zerar_zerar_path, class: "waves-effect waves-light btn"%> <small>Recomenda-se zerar a contagem uma vez a cada 2 mêses </small>    
             </div>
             <div class="col s4">
             <div class="collection">
