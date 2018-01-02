@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="row">
+    <div class="input-field col s12">
+      <%= form.text_field :ordem, id: :video_ordem, required: true %>
+      <%= form.label :ordem %>
+    </div>
+  </div>
+
+  <div class="row">
       <div class="input-field col s12">
         <%= form.text_field :titulo, id: :video_titulo %>
         <%= form.label :titulo %>

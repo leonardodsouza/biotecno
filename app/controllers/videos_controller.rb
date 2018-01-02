@@ -5,7 +5,7 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+    @videos = Video.all.order(ordem: :asc)
     @pagina_6 = Pagina.find(6)
 
     @grafico = Grafico.new
@@ -75,6 +75,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:titulo, :texto, :url)
+      params.require(:video).permit(:titulo, :texto, :url, :ordem)
     end
 end

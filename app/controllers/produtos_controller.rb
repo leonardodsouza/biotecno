@@ -1,5 +1,5 @@
 class ProdutosController < ApplicationController
-  before_action :authenticate_usuario!, except: [:index, :show]
+  before_action :authenticate_usuario!, except: [:index, :show, :categoria]
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
 
   # GET /produtos
@@ -10,6 +10,11 @@ class ProdutosController < ApplicationController
     @grafico = Grafico.new
     @grafico.item = 'Produtos'
     @grafico.save
+  end
+
+  def categoria
+    @categoria = Categoria.find(params[:id])
+    @produtos = Produto.where('categoria_id = ?', params[:id]).order(ordem: :asc)
   end
 
   # GET /produtos/1

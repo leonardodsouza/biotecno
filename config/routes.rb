@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'home' => 'home#index', :as => 'home'
     get 'admin' => 'admin#index', :as => 'admin'
     get 'zerar/zerar'
+    get 'categoria/:id' => 'produtos#categoria', :as => 'categoria'
     resources :ajudas 
     resources :artigos   
     resources :assistencias

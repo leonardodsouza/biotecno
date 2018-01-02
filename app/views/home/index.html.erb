@@ -31,7 +31,7 @@
                     <h4 class="center teal-text text-lighten-2"><%= categoria.nome %></h4>
                     <div class="card horizontal hide-on-small-only">
                         <div class="card-image">
-                            <%= link_to produtos_path do  %>
+                            <%= link_to categoria_path(categoria) do  %>
                                 <%= image_tag categoria.img.url(:medium) %>
                             <%end%>
                         </div>
@@ -50,7 +50,7 @@
                             </div>
                         <%else%> 
                             <div class="card-action">
-                                <%= link_to  Produto.model_name.human, produtos_path  %>
+                                <%= link_to  Produto.model_name.human, categoria_path(categoria)  %>
                             </div>
                         <%end%>    
                         </div>

@@ -1,0 +1,59 @@
+<script>
+    $(document).ready(function(){
+      $('.scrollspy').scrollSpy();
+    });
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m9 l10">
+      
+        <div id="<%= @categoria.id%>" class="section scrollspy"></div> 
+          <div class="card-panel hoverable" style="background: <%= @categoria.classe %>;">
+            <div class="card-content" style="color: <%= @categoria.texto %>;">
+              <h4 class="header text-lighten-2" style="color: <%= @categoria.titulo %>;"> <%= @categoria.nome %></h4>
+              <span> <%= raw(@categoria.descricao) %></span>
+            </div>
+          </div> 
+            
+   
+     
+        <% for produto in @produtos %>
+          <div class="card horizontal hoverable">
+            <div class="card-image">
+              <%= link_to (image_tag produto.foto.url(:lista)), produto, class: "responsive-img" %>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="header teal-text text-lighten-2"><%= produto.modelo %></h5>
+                <p class="hide-on-small-only"><%= produto.resumo %></p>
+              </div>
+              <div class="card-action">
+                <%= link_to t('visualizar'), produto %>
+                <% if usuario_signed_in? %>
+                  <%= link_to edit_produto_path(produto), class: "btn-floating" do %>
+                    <i class="material-icons">edit</i>
+                  <%end%>
+                  <%= link_to produto, method: :delete, data: { confirm: 'Deseja apagar ?' }, class: "btn-floating red" do%>
+                    <i class="material-icons">delete</i>
+                  <%end%>
+                <%end%> 
+              </div>
+            </div>
+          </div>
+        <%end%>
+      
+   
+  </div>
+  <div class="col hide-on-small-only m3 l2">
+      <div style="position: fixed; top: 200px; ">
+        <ul class="section table-of-contents">
+          <% for categoria in Categoria.all.order(ordem: :asc) %>
+          <% if Produto.find_by_categoria_id(categoria.id) %>
+            <li><%= link_to  categoria.nome, categoria_path(categoria) %></li>
+          <%end%>  
+          <%end%>  
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
