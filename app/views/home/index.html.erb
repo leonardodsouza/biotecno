@@ -8,6 +8,7 @@
         </div>
         <div class="row center">
             <% if usuario_signed_in? %>
+            
             <%= link_to  Produto.model_name.human, produtos_path, class: "btn-large waves-effect waves-light teal lighten-1"  %>
             <% if usuario_signed_in? %>
                 <%= link_to  "Editar", edit_banner_path(1), class: "btn-large waves-effect waves-light teal lighten-1"  %>
