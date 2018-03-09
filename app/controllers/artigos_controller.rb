@@ -75,6 +75,6 @@ class ArtigosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artigo_params
-      params.require(:artigo).permit(:foto, :titulo, :resumo, :texto, :visualizacoes)
+      params.require(:artigo).permit(:foto, :titulo, :resumo, :texto, :visualizacoes, :ordem)
     end
 end
